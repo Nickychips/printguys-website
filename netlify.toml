@@ -1,0 +1,49 @@
+[build]
+  # Tell Netlify where the website files are located
+  publish = "development/frontend"
+  
+  # No build command needed for static HTML site
+  command = "echo 'Static site deployment - no build required'"
+
+[build.environment]
+  # Ensure we're using the latest Node version if needed
+  NODE_VERSION = "18"
+
+# Redirect rules for clean URLs (without .html extension)
+[[redirects]]
+  from = "/about"
+  to = "/about.html"
+  status = 200
+
+[[redirects]]
+  from = "/contact" 
+  to = "/contact.html"
+  status = 200
+
+[[redirects]]
+  from = "/blog"
+  to = "/blog.html"
+  status = 200
+
+# Catch-all redirect for any other pages
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 404
+
+# Security headers
+[[headers]]
+  for = "/*"
+  
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    
+# Cache static assets
+[[headers]]
+  for = "/assets/*"
+  
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
