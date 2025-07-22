@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Direct to Film (DTF) Printing Canada | PrintGuys Professional DTF Services</title>
+    <meta name="description" content="Professional Direct to Film (DTF) printing in Canada. Works on any fabric - cotton, polyester, blends. No minimums, fast turnaround, vibrant colors on light and dark garments.">
+    <link rel="icon" type="image/png" href="/assets/images/logo/printguys logotb.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .hero-gradient { background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #000000 100%); }
+        .text-gradient { background: linear-gradient(135deg, #ef4444, #dc2626); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .contact-banner { background-color: #dc2626; }
+        .floating-cta { position: fixed; bottom: 20px; right: 20px; z-index: 1000; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); }
+        @media (max-width: 768px) { .floating-cta { bottom: 10px; right: 10px; } }
+    </style>
+</head>
+<body class="bg-black text-white">
+
+    <!-- Contact Banner -->
+    <div class="contact-banner py-2 px-4">
+        <div class="container mx-auto">
+            <div class="flex flex-col sm:flex-row items-center justify-center text-center sm:text-left">
+                <div class="text-white font-semibold">
+                    <span class="mr-4">Contact Nick:</span>
+                    <a href="tel:6476856286" class="hover:underline font-bold mr-4">647-685-6286</a>
+                    <span class="hidden sm:inline">|</span>
+                    <a href="mailto:printguys.ca@gmail.com" class="hover:underline font-bold sm:ml-4 block sm:inline mt-1 sm:mt-0">printguys.ca@gmail.com</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header Navigation -->
+    <header class="bg-black border-b border-red-600">
+        <div class="container mx-auto px-4">
+            <nav class="flex items-center justify-between py-4">
+                <div class="flex items-center">
+                    <a href="/"><img src="/assets/images/logo/printguys logotb.png" alt="PrintGuys Logo" class="h-8 md:h-10"></a>
+                </div>
+                
+                <div class="hidden md:flex space-x-8">
+                    <a href="/" class="text-white hover:text-red-500 transition-colors">Home</a>
+                    <a href="/about" class="text-white hover:text-red-500 transition-colors">About Us</a>
+                    <a href="/blog" class="text-white hover:text-red-500 transition-colors">Blog</a>
+                    <a href="/contact" class="text-white hover:text-red-500 transition-colors">Contact</a>
+                </div>
+
+                <div class="hidden md:block">
+                    <a href="/contact" class="bg-red-600 text-white px-6 py-2 rounded-lg font-bold hover:bg-red-700 transition-colors">Get Quote</a>
+                </div>
+
+                <button class="md:hidden text-white" id="mobile-menu-btn">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </nav>
+
+            <div class="md:hidden hidden" id="mobile-menu">
+                <div class="py-4 space-y-4 border-t border-red-600">
+                    <a href="/" class="block text-white hover:text-red-500">Home</a>
+                    <a href="/about" class="block text-white hover:text-red-500">About Us</a>
+                    <a href="/blog" class="block text-white hover:text-red-500">Blog</a>
+                    <a href="/contact" class="block text-white hover:text-red-500">Contact</a>
+                    <a href="/contact" class="block bg-red-600 text-white px-4 py-2 rounded-lg font-bold text-center">Get Quote</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient py-20 lg:py-32">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-4xl mx-auto">
+                <h1 class="text-4xl lg:text-6xl font-bold mb-6">Professional <span class="text-gradient">Direct to Film</span><br>DTF Printing</h1>
+                <p class="text-xl text-gray-300 mb-6">Works on ANY fabric - cotton, polyester, blends, and more</p>
+                
+                <div class="text-lg text-gray-300 mb-8 leading-relaxed">
+                    Canada's largest DTF printer offering professional Direct to Film transfers that work on any fabric type. No pre-treatment needed, vibrant colors on light and dark garments, with exceptional durability and flexibility.
+                </div>
+                
+                <!-- Key Features -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-red-500 mb-2">Any Fabric</div>
+                        <div class="text-gray-400 text-sm">Universal Compatibility</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-red-500 mb-2">24hrs</div>
+                        <div class="text-gray-400 text-sm">Fast Turnaround</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-red-500 mb-2">No Min</div>
+                        <div class="text-gray-400 text-sm">Order Requirements</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-red-500 mb-2">Vibrant</div>
+                        <div class="text-gray-400 text-sm">Full Color Prints</div>
+                    </div>
+                </div>
+
+                <!-- CTA Buttons -->
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="/contact" class="bg-red-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-red-700 transition-colors">Get DTF Quote</a>
+                    <a href="tel:6476856286" class="bg-transparent border-2 border-red-600 text-red-500 px-8 py-4 rounded-lg font-bold text-lg hover:bg-red-600 hover:text-white transition-colors">Call: 647-685-6286</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What is DTF -->
+    <section class="py-16 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl font-bold text-white mb-8 text-center">What is Direct to Film (DTF) Printing?</h2>
+                
+                <div class="bg-black rounded-xl p-8 mb-12">
+                    <p class="text-lg text-gray-300 leading-relaxed">
+                        <strong class="text-red-500">Direct to Film (DTF)</strong> is a revolutionary digital printing technology that allows designs to be printed onto a special PET film, which is then transferred onto a wide variety of fabrics and materials using a heat press. Unlike DTG (Direct to Garment), DTF doesn't require pre-treatment and works exceptionally well on both light and dark fabrics, synthetic and natural fibers.
+                    </p>
+                </div>
+
+                <!-- Process Steps -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-black rounded-xl p-6 text-center">
+                        <div class="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-xl font-bold text-white">1</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2">Design Printing</h3>
+                        <p class="text-gray-400 text-sm">Design printed in reverse onto PET film using DTF-specific inks (CMYK + White)</p>
+                    </div>
+
+                    <div class="bg-black rounded-xl p-6 text-center">
+                        <div class="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-xl font-bold text-white">2</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2">Adhesive Powder</h3>
+                        <p class="text-gray-400 text-sm">Special hot-melt adhesive powder applied to printed design while ink is wet</p>
+                    </div>
+
+                    <div class="bg-black rounded-xl p-6 text-center">
+                        <div class="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-xl font-bold text-white">3</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2">Curing</h3>
+                        <p class="text-gray-400 text-sm">Film cured using heat press, melting powder into adhesive layer</p>
+                    </div>
+
+                    <div class="bg-black rounded-xl p-6 text-center">
+                        <div class="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-xl font-bold text-white">4</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2">Transfer</h3>
+                        <p class="text-gray-400 text-sm">Transfer pressed onto garment at 290-320°F for 10-20 seconds</p>
+                    </div>
+
+                    <div class="bg-black rounded-xl p-6 text-center">
+                        <div class="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-xl font-bold text-white">5</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2">Peel & Finish</h3>
+                        <p class="text-gray-400 text-sm">Film peeled away leaving design permanently bonded to material</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Strengths & Applications -->
+    <section class="py-16 bg-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    <!-- Strengths -->
+                    <div>
+                        <h2 class="text-3xl font-bold text-white mb-8">Why Choose DTF?</h2>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <div class="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center mr-3 mt-1">
+                                    <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-bold text-white">Universal Fabric Compatibility</h3>
+                                    <p class="text-gray-400 text-sm">Works on cotton, polyester, blends, canvas, nylon, and even leather</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div class="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center mr-3 mt-1">
+                                    <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-bold text-white">No Pretreatment Needed</h3>
+                                    <p class="text-gray-400 text-sm">Unlike DTG, DTF skips pre-treatment process, saving time and labor</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div class="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center mr-3 mt-1">
+                                    <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-bold text-white">Vivid Colors + Strong Opacity</h3>
+                                    <p class="text-gray-400 text-sm">White ink base allows designs to pop on dark or colored garments</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div class="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center mr-3 mt-1">
+                                    <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-bold text-white">Exceptional Durability</h3>
+                                    <p class="text-gray-400 text-sm">Transfers are wash-resistant, flexible, and long-lasting</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div class="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center mr-3 mt-1">
+                                    <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-bold text-white">On-Demand Production</h3>
+                                    <p class="text-gray-400 text-sm">Perfect for short runs, custom orders, and quick turnaround</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Applications -->
+                    <div>
+                        <h2 class="text-3xl font-bold text-white mb-8">Perfect Applications</h2>
+                        
+                        <div class="grid grid-cols-1 gap-6">
+                            <!-- Apparel -->
+                            <div class="bg-black rounded-lg p-4">
+                                <h3 class="text-red-500 font-bold mb-2">Apparel</h3>
+                                <ul class="text-gray-400 text-sm space-y-1 grid grid-cols-2 gap-1">
+                                    <li>• T-shirts (all fabrics)</li>
+                                    <li>• Hoodies & crewnecks</li>
+                                    <li>• Joggers & athletic wear</li>
+                                    <li>• Caps and hats</li>
+                                    <li>• Workwear & uniforms</li>
+                                    <li>• Sports jerseys</li>
+                                    <li>• Denim jackets</li>
+                                    <li>• Canvas bags</li>
+                                </ul>
+                            </div>
+
+                            <!-- Accessories -->
+                            <div class="bg-black rounded-lg p-4">
+                                <h3 class="text-red-500 font-bold mb-2">Accessories & More</h3>
+                                <ul class="text-gray-400 text-sm space-y-1 grid grid-cols-2 gap-1">
+                                    <li>• Tote bags</li>
+                                    <li>• Backpacks</li>
+                                    <li>• Aprons</li>
+                                    <li>• Shoes</li>
+                                    <li>• Face masks</li>
+                                    <li>• Promotional items</li>
+                                    <li>• Custom merchandise</li>
+                                    <li>• Brand starter kits</li>
+                                </ul>
+                            </div>
+
+                            <!-- Business Applications -->
+                            <div class="bg-black rounded-lg p-4">
+                                <h3 class="text-red-500 font-bold mb-2">Business Applications</h3>
+                                <ul class="text-gray-400 text-sm space-y-1">
+                                    <li>• Print-on-demand stores (Etsy, Shopify, Amazon)</li>
+                                    <li>• Heat press businesses & entrepreneurs</li>
+                                    <li>• Clothing brands with complex designs</li>
+                                    <li>• Uniform shops offering customization</li>
+                                    <li>• Merch creators prep transfers in advance</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DTF vs Other Methods -->
+    <section class="py-16 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl font-bold text-white mb-8 text-center">DTF vs Other Printing Methods</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-black rounded-xl p-6">
+                        <h3 class="text-xl font-bold text-green-500 mb-4">✅ DTF Advantages</h3>
+                        <ul class="space-y-2 text-gray-300">
+                            <li>• Works on ANY fabric type</li>
+                            <li>• No pretreatment required</li>
+                            <li>• Excellent on dark garments</li>
+                            <li>• Store transfers for later use</li>
+                            <li>• Soft but durable feel</li>
+                            <li>• Full-color complexity</li>
+                            <li>• Fast turnaround times</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-black rounded-xl p-6">
+                        <h3 class="text-xl font-bold text-yellow-500 mb-4">⚠️ Considerations</h3>
+                        <ul class="space-y-2 text-gray-300">
+                            <li>• Slightly thicker feel than DTG</li>
+                            <li>• More noticeable than sublimation</li>
+                            <li>• Requires proper curing process</li>
+                            <li>• Not ideal for massive bulk runs</li>
+                            <li>• Film handling requires care</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-16 bg-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="text-3xl font-bold text-white mb-6">Ready for Professional DTF Printing?</h2>
+                <p class="text-lg text-gray-300 mb-8">Canada's largest DTF printer with professional quality and lightning-fast turnaround</p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="/contact" class="bg-red-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-red-700 transition-colors">Get Your DTF Quote</a>
+                    <a href="mailto:printguys.ca@gmail.com?subject=DTF Quote Request" class="bg-transparent border-2 border-red-600 text-red-500 px-8 py-4 rounded-lg font-bold text-lg hover:bg-red-600 hover:text-white transition-colors">Email Your Design</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating CTA -->
+    <div class="floating-cta">
+        <a href="/contact" class="bg-red-600 text-white px-6 py-3 rounded-full font-bold hover:bg-red-700 transition-colors flex items-center shadow-lg">
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+            </svg>
+            DTF Quote
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-black border-t border-red-600 py-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-center md:text-left">
+                <div>
+                    <img src="/assets/images/logo/printguys logotb.png" alt="PrintGuys Logo" class="h-8 mx-auto md:mx-0 mb-4">
+                    <p class="text-gray-400">Canada's largest DTF printer - professional results on any fabric</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-4">Contact Nick</h4>
+                    <div class="space-y-2 text-gray-400">
+                        <div><a href="tel:6476856286" class="text-white hover:text-red-500 font-bold">647-685-6286</a></div>
+                        <div><a href="mailto:printguys.ca@gmail.com" class="text-white hover:text-red-500 font-bold">printguys.ca@gmail.com</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-4 text-center">
+                <p class="text-gray-400">&copy; 2025 PrintGuys. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
