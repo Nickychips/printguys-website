@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Screen Printing Canada | PrintGuys Professional Screen Printing Services</title>
+    <meta name="description" content="Professional screen printing services in Canada. Industry gold standard for bold, vibrant, durable designs. Perfect for bulk orders, corporate uniforms, and promotional products.">
+    <link rel="icon" type="image/png" href="/assets/images/logo/printguys logotb.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .hero-gradient { background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #000000 100%); }
+        .text-gradient { background: linear-gradient(135deg, #ef4444, #dc2626); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .contact-banner { background-color: #dc2626; }
+        .floating-cta { position: fixed; bottom: 20px; right: 20px; z-index: 1000; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); }
+        @media (max-width: 768px) { .floating-cta { bottom: 10px; right: 10px; } }
+    </style>
+</head>
+<body class="bg-black text-white">
+
+    <!-- Contact Banner -->
+    <div class="contact-banner py-2 px-4">
+        <div class="container mx-auto">
+            <div class="flex flex-col sm:flex-row items-center justify-center text-center sm:text-left">
+                <div class="text-white font-semibold">
+                    <span class="mr-4">Contact Nick:</span>
+                    <a href="tel:6476856286" class="hover:underline font-bold mr-4">647-685-6286</a>
+                    <span class="hidden sm:inline">|</span>
+                    <a href="mailto:printguys.ca@gmail.com" class="hover:underline font-bold sm:ml-4 block sm:inline mt-1 sm:mt-0">printguys.ca@gmail.com</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header Navigation -->
+    <header class="bg-black border-b border-red-600">
+        <div class="container mx-auto px-4">
+            <nav class="flex items-center justify-between py-4">
+                <div class="flex items-center">
+                    <a href="/"><img src="/assets/images/logo/printguys logotb.png" alt="PrintGuys Logo" class="h-8 md:h-10"></a>
+                </div>
+                
+                <div class="hidden md:flex space-x-8">
+                    <a href="/" class="text-white hover:text-red-500 transition-colors">Home</a>
+                    <a href="/about" class="text-white hover:text-red-500 transition-colors">About Us</a>
+                    <a href="/blog" class="text-white hover:text-red-500 transition-colors">Blog</a>
+                    <a href="/contact" class="text-white hover:text-red-500 transition-colors">Contact</a>
+                </div>
+
+                <div class="hidden md:block">
+                    <a href="/contact" class="bg-red-600 text-white px-6 py-2 rounded-lg font-bold hover:bg-red-700 transition-colors">Get Quote</a>
+                </div>
+
+                <button class="md:hidden text-white" id="mobile-menu-btn">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </nav>
+
+            <div class="md:hidden hidden" id="mobile-menu">
+                <div class="py-4 space-y-4 border-t border-red-600">
+                    <a href="/" class="block text-white hover:text-red-500">Home</a>
+                    <a href="/about" class="block text-white hover:text-red-500">About Us</a>
+                    <a href="/blog" class="block text-white hover:text-red-500">Blog</a>
+                    <a href="/contact" class="block text-white hover:text-red-500">Contact</a>
+                    <a href="/contact" class="block bg-red-600 text-white px-4 py-2 rounded-lg font-bold text-center">Get Quote</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient py-20 lg:py-32">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-4xl mx-auto">
+                <h1 class="text-4xl lg:text-6xl font-bold mb-6">Professional <span class="text-gradient">Screen Printing</span><br>Services</h1>
+                <p class="text-xl text-gray-300 mb-6">The industry gold standard for bold, vibrant, and durable designs</p>
+                
+                <div class="text-lg text-gray-300 mb-8 leading-relaxed">
+                    Screen printing is the most widely used and reliable method for printing apparel and promotional goods. Perfect for bulk orders with unmatched durability, vibrancy, and cost-efficiency at scale.
+                </div>
+                
+                <!-- Key Features -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-blue-500 mb-2">Durable</div>
+                        <div class="text-gray-400 text-sm">Wash Resistant</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-blue-500 mb-2">Vibrant</div>
+                        <div class="text-gray-400 text-sm">Bold Colors</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-blue-500 mb-2">Scalable</div>
+                        <div class="text-gray-400 text-sm">Cost-Efficient</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-blue-500 mb-2">Versatile</div>
+                        <div class="text-gray-400 text-sm">Specialty Inks</div>
+                    </div>
+                </div>
+
+                <!-- CTA Buttons -->
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="/contact" class="bg-blue-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-700 transition-colors">Get Screen Print Quote</a>
+                    <a href="tel:6476856286" class="bg-transparent border-2 border-blue-600 text-blue-500 px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-600 hover:text-white transition-colors">Call: 647-685-6286</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What is Screen Printing -->
+    <section class="py-16 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl font-bold text-white mb-8 text-center">What is Screen Printing?</h2>
+                
+                <div class="bg-black rounded-xl p-8 mb-12">
+                    <p class="text-lg text-gray-300 leading-relaxed">
+                        <strong class="text-blue-500">Screen printing</strong> (also known as silkscreen printing or serigraphy) is a traditional printing technique where ink is pushed through a mesh screen that's been prepared with a stencil of the design. Each color in the design requires its own screen, and the ink is layered one color at a time onto the substrate—usually fabric, but also paper, wood, metal, and more. It's one of the most widely used and reliable methods for printing apparel and promotional goods due to its durability, vibrancy, and scalability.
+                    </p>
+                </div>
+
+                <!-- Process Steps -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-black rounded-xl p-6 text-center">
+                        <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-xl font-bold text-white">1</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2">Artwork Separation</h3>
+                        <p class="text-gray-400 text-sm">Design separated by color. Each color requires its own film and screen</p>
+                    </div>
+
+                    <div class="bg-black rounded-xl p-6 text-center">
+                        <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-xl font-bold text-white">2</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2">Screen Preparation</h3>
+                        <p class="text-gray-400 text-sm">Mesh screens coated with light-sensitive emulsion and exposed to UV light</p>
+                    </div>
+
+                    <div class="bg-black rounded-xl p-6 text-center">
+                        <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-xl font-bold text-white">3</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2">Setup & Registration</h3>
+                        <p class="text-gray-400 text-sm">Screens aligned on printing press to ensure proper registration between colors</p>
+                    </div>
+
+                    <div class="bg-black rounded-xl p-6 text-center">
+                        <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-xl font-bold text-white">4</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2">Printing Process</h3>
+                        <p class="text-gray-400 text-sm">Ink pushed through stencil using squeegee. Each color printed separately</p>
+                    </div>
+
+                    <div class="bg-black rounded-xl p-6 text-center">
+                        <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-xl font-bold text-white">5</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2">Curing & Finishing</h3>
+                        <p class="text-gray-400 text-sm">Garment goes through conveyor dryer to cure ink ensuring durability</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Strengths & Applications -->
+    <section class="py-16 bg-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    <!-- Strengths -->
+                    <div>
+                        <h2 class="text-3xl font-bold text-white mb-8">Why Choose Screen Printing?</h2>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <div class="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center mr-3 mt-1">
+                                    <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-bold text-white">Unmatched Durability</h3>
+                                    <p class="text-gray-400 text-sm">Thick inks (especially plastisol) are long-lasting and wash-resistant</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div class="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center mr-3 mt-1">
+                                    <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-bold text-white">Vibrant, Opaque Colors</h3>
+                                    <p class="text-gray-400 text-sm">Prints stay bold and clean, even on dark garments</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div class="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center mr-3 mt-1">
+                                    <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-bold text-white">Cost-Efficient for Bulk Orders</h3>
+                                    <p class="text-gray-400 text-sm">Lower cost per unit due to screen reuse - ideal for large quantities</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div class="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center mr-3 mt-1">
+                                    <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-bold text-white">Specialty Ink Versatility</h3>
+                                    <p class="text-gray-400 text-sm">Puff, metallic, glow-in-the-dark, glitter, suede, high-density inks available</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div class="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center mr-3 mt-1">
+                                    <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-bold text-white">Bold Graphic Impact</h3>
+                                    <p class="text-gray-400 text-sm">Perfect for layering textures and creating striking visual effects</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Applications -->
+                    <div>
+                        <h2 class="text-3xl font-bold text-white mb-8">Perfect Applications</h2>
+                        
+                        <div class="grid grid-cols-1 gap-6">
+                            <!-- Apparel -->
+                            <div class="bg-black rounded-lg p-4">
+                                <h3 class="text-blue-500 font-bold mb-2">Apparel</h3>
+                                <ul class="text-gray-400 text-sm space-y-1 grid grid-cols-2 gap-1">
+                                    <li>• T-shirts</li>
+                                    <li>• Hoodies</li>
+                                    <li>• Sweatshirts</li>
+                                    <li>• Tank tops</li>
+                                    <li>• Jerseys</li>
+                                    <li>• Workwear & uniforms</li>
+                                </ul>
+                            </div>
+
+                            <!-- Promotional Products -->
+                            <div class="bg-black rounded-lg p-4">
+                                <h3 class="text-blue-500 font-bold mb-2">Promotional Products</h3>
+                                <ul class="text-gray-400 text-sm space-y-1 grid grid-cols-2 gap-1">
+                                    <li>• Tote bags</li>
+                                    <li>• Bandanas</li>
+                                    <li>• Aprons</li>
+                                    <li>• Koozies</li>
+                                    <li>• Flags & banners</li>
+                                    <li>• Event merchandise</li>
+                                </ul>
+                            </div>
+
+                            <!-- Specialty Items -->
+                            <div class="bg-black rounded-lg p-4">
+                                <h3 class="text-blue-500 font-bold mb-2">Specialty Items</h3>
+                                <ul class="text-gray-400 text-sm space-y-1">
+                                    <li>• Fine art prints & posters</li>
+                                    <li>• Gig posters & limited editions</li>
+                                    <li>• Skateboards & hard goods</li>
+                                    <li>• Wooden signs</li>
+                                    <li>• Plastics & metals (with proper inks)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases & When to Choose -->
+    <section class="py-16 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl font-bold text-white mb-8 text-center">Ideal Use Cases</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-black rounded-xl p-6">
+                        <h3 class="text-xl font-bold text-green-500 mb-4">✅ Perfect For</h3>
+                        <ul class="space-y-2 text-gray-300">
+                            <li>• Bulk orders (50+ pieces)</li>
+                            <li>• Simple 1-3 color designs</li>
+                            <li>• Corporate uniforms & branding</li>
+                            <li>• Team jerseys & sports apparel</li>
+                            <li>• Event merchandise</li>
+                            <li>• Promotional campaigns</li>
+                            <li>• School & organization orders</li>
+                            <li>• Bold, graphic designs</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-black rounded-xl p-6">
+                        <h3 class="text-xl font-bold text-yellow-500 mb-4">⚠️ Consider Alternatives For</h3>
+                        <ul class="space-y-2 text-gray-300">
+                            <li>• Very small quantities (under 25)</li>
+                            <li>• Complex, photo-realistic images</li>
+                            <li>• Full-color gradients</li>
+                            <li>• Extremely detailed artwork</li>
+                            <li>• Quick one-off prototypes</li>
+                            <li>• Designs with 6+ colors</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industry Examples -->
+    <section class="py-16 bg-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl font-bold text-white mb-8 text-center">Industry Examples</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-black rounded-xl p-6">
+                        <h3 class="text-lg font-bold text-blue-500 mb-3">Streetwear Brands</h3>
+                        <p class="text-gray-400 text-sm mb-3">High-volume, limited edition drops with bold graphics</p>
+                        <div class="text-xs text-gray-500">Perfect for: Brand consistency, cost-effective production</div>
+                    </div>
+
+                    <div class="bg-black rounded-xl p-6">
+                        <h3 class="text-lg font-bold text-blue-500 mb-3">Corporate Uniforms</h3>
+                        <p class="text-gray-400 text-sm mb-3">Consistent, durable logos for employee apparel</p>
+                        <div class="text-xs text-gray-500">Perfect for: Professional appearance, wash durability</div>
+                    </div>
+
+                    <div class="bg-black rounded-xl p-6">
+                        <h3 class="text-lg font-bold text-blue-500 mb-3">Events & Festivals</h3>
+                        <p class="text-gray-400 text-sm mb-3">Hundreds or thousands of commemorative tees</p>
+                        <div class="text-xs text-gray-500">Perfect for: Large quantities, cost efficiency</div>
+                    </div>
+
+                    <div class="bg-black rounded-xl p-6">
+                        <h3 class="text-lg font-bold text-blue-500 mb-3">Schools & Sports Teams</h3>
+                        <p class="text-gray-400 text-sm mb-3">Team jerseys and spirit wear with repeating designs</p>
+                        <div class="text-xs text-gray-500">Perfect for: Uniform appearance, budget-friendly</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-16 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="text-3xl font-bold text-white mb-6">Ready for Professional Screen Printing?</h2>
+                <p class="text-lg text-gray-300 mb-8">The industry gold standard for bold, vibrant, and durable designs at scale</p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="/contact" class="bg-blue-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-700 transition-colors">Get Your Screen Print Quote</a>
+                    <a href="mailto:printguys.ca@gmail.com?subject=Screen Printing Quote Request" class="bg-transparent border-2 border-blue-600 text-blue-500 px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-600 hover:text-white transition-colors">Email Your Design</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating CTA -->
+    <div class="floating-cta">
+        <a href="/contact" class="bg-blue-600 text-white px-6 py-3 rounded-full font-bold hover:bg-blue-700 transition-colors flex items-center shadow-lg">
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+            </svg>
+            Screen Print Quote
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-black border-t border-red-600 py-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-center md:text-left">
+                <div>
+                    <img src="/assets/images/logo/printguys logotb.png" alt="PrintGuys Logo" class="h-8 mx-auto md:mx-0 mb-4">
+                    <p class="text-gray-400">Professional screen printing - the industry standard for quality and durability</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-4">Contact Nick</h4>
+                    <div class="space-y-2 text-gray-400">
+                        <div><a href="tel:6476856286" class="text-white hover:text-red-500 font-bold">647-685-6286</a></div>
+                        <div><a href="mailto:printguys.ca@gmail.com" class="text-white hover:text-red-500 font-bold">printguys.ca@gmail.com</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-4 text-center">
+                <p class="text-gray-400">&copy; 2025 PrintGuys. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
