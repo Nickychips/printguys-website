@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shimmering Background Effect Demo | PrintGuys</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-black text-white min-h-screen">
+    <!-- Demo Container -->
+    <div class="relative min-h-screen">
+        <!-- Header -->
+        <header class="relative z-10 pt-8 pb-4">
+            <div class="container mx-auto px-4 text-center">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4">
+                    Shimmering Background Effects
+                </h1>
+                <p class="text-xl text-gray-300 mb-8">
+                    Service-specific animated backgrounds for PrintGuys website
+                </p>
+            </div>
+        </header>
+
+        <!-- Demo Controls -->
+        <div class="relative z-10 py-8">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto">
+                    <h2 class="text-2xl font-bold mb-6 text-center">Try Different Service Themes</h2>
+                    
+                    <!-- Theme Buttons -->
+                    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-8">
+                        <button onclick="switchTheme('dtf')" 
+                                class="theme-btn bg-red-600 hover:bg-red-700 text-white px-4 py-3 rounded-lg font-bold transition-colors">
+                            DTF
+                            <div class="text-xs opacity-75">Red Theme</div>
+                        </button>
+                        
+                        <button onclick="switchTheme('sublimation')" 
+                                class="theme-btn bg-purple-600 hover:bg-purple-700 text-white px-4 py-3 rounded-lg font-bold transition-colors">
+                            Sublimation
+                            <div class="text-xs opacity-75">Purple Theme</div>
+                        </button>
+                        
+                        <button onclick="switchTheme('screen-printing')" 
+                                class="theme-btn bg-blue-600 hover:bg-blue-700 text-white px-4 py-3 rounded-lg font-bold transition-colors">
+                            Screen Print
+                            <div class="text-xs opacity-75">Blue Theme</div>
+                        </button>
+                        
+                        <button onclick="switchTheme('embroidery')" 
+                                class="theme-btn bg-yellow-600 hover:bg-yellow-700 text-white px-4 py-3 rounded-lg font-bold transition-colors">
+                            Embroidery
+                            <div class="text-xs opacity-75">Gold Theme</div>
+                        </button>
+                        
+                        <button onclick="switchTheme('uv-dtf-stickers')" 
+                                class="theme-btn bg-green-600 hover:bg-green-700 text-white px-4 py-3 rounded-lg font-bold transition-colors">
+                            UV DTF
+                            <div class="text-xs opacity-75">Green Theme</div>
+                        </button>
+                        
+                        <button onclick="switchTheme('large-format')" 
+                                class="theme-btn bg-orange-600 hover:bg-orange-700 text-white px-4 py-3 rounded-lg font-bold transition-colors">
+                            Large Format
+                            <div class="text-xs opacity-75">Orange Theme</div>
+                        </button>
+                    </div>
+
+                    <!-- Current Theme Display -->
+                    <div class="text-center mb-8">
+                        <div class="inline-block bg-gray-800 rounded-lg px-6 py-3">
+                            <span class="text-gray-400">Current Theme: </span>
+                            <span id="current-theme" class="font-bold text-white">Default</span>
+                        </div>
+                    </div>
+
+                    <!-- Controls -->
+                    <div class="bg-gray-900 rounded-xl p-6 mb-8">
+                        <h3 class="text-lg font-bold mb-4">Effect Controls</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm font-medium mb-2">Particle Count</label>
+                                <input type="range" id="particle-count" min="20" max="100" value="50" 
+                                       class="w-full h-2 bg-gray-700 rounded-lg appearance-none cursor-pointer">
+                                <div class="text-xs text-gray-400 mt-1">Current: <span id="particle-count-value">50</span></div>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-sm font-medium mb-2">Opacity</label>
+                                <input type="range" id="opacity" min="0.05" max="0.3" step="0.05" value="0.15" 
+                                       class="w-full h-2 bg-gray-700 rounded-lg appearance-none cursor-pointer">
+                                <div class="text-xs text-gray-400 mt-1">Current: <span id="opacity-value">0.15</span></div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-4 flex gap-4">
+                            <button onclick="applySettings()" 
+                                    class="bg-white text-black px-6 py-2 rounded-lg font-bold hover:bg-gray-200 transition-colors">
+                                Apply Changes
+                            </button>
+                            <button onclick="resetSettings()" 
+                                    class="bg-gray-700 text-white px-6 py-2 rounded-lg font-bold hover:bg-gray-600 transition-colors">
+                                Reset to Default
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Implementation Guide -->
+                    <div class="bg-gray-900 rounded-xl p-6">
+                        <h3 class="text-lg font-bold mb-4">Implementation Guide</h3>
+                        <div class="bg-black rounded-lg p-4 font-mono text-sm text-green-400 mb-4">
+                            <div class="text-gray-400 mb-2">// Add to any service page:</div>
+                            <div>&lt;script src="/components/effects/shimmering-background.js"&gt;&lt;/script&gt;</div>
+                            <div class="mt-2 text-gray-400">// Auto-detects service and applies theme automatically</div>
+                            <div class="mt-4 text-gray-400">// Manual initialization:</div>
+                            <div>ShimmeringBackground.init('<span id="demo-service">dtf</span>');</div>
+                        </div>
+                        
+                        <div class="text-sm text-gray-400">
+                            <p class="mb-2"><strong>Features:</strong></p>
+                            <ul class="list-disc list-inside space-y-1">
+                                <li>Auto-detects service pages and applies corresponding color themes</li>
+                                <li>Responsive design with mobile optimizations</li>
+                                <li>Respects user's motion preferences (prefers-reduced-motion)</li>
+                                <li>Lightweight and performant with CSS3 animations</li>
+                                <li>Easy to customize and extend</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Demo Content -->
+        <div class="relative z-10 py-16">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-3xl font-bold mb-6">Experience the Effect</h2>
+                <p class="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
+                    This subtle background animation adds depth and visual interest to service pages 
+                    while maintaining excellent readability and performance.
+                </p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+                    <div class="bg-gray-900/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700">
+                        <h3 class="text-xl font-bold mb-3">Subtle Animation</h3>
+                        <p class="text-gray-300 text-sm">
+                            Floating particles create gentle movement without being distracting
+                        </p>
+                    </div>
+                    
+                    <div class="bg-gray-900/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700">
+                        <h3 class="text-xl font-bold mb-3">Service Themes</h3>
+                        <p class="text-gray-300 text-sm">
+                            Each service page gets its own color theme that matches the brand
+                        </p>
+                    </div>
+                    
+                    <div class="bg-gray-900/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700">
+                        <h3 class="text-xl font-bold mb-3">Performance</h3>
+                        <p class="text-gray-300 text-sm">
+                            Optimized animations that don't impact page performance
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Load the shimmering background script -->
+    <script src="/components/effects/shimmering-background.js"></script>
+    
+    <script>
+        let currentTheme = 'default';
+        
+        function switchTheme(theme) {
+            currentTheme = theme;
+            document.getElementById('current-theme').textContent = ShimmeringBackground.themes[theme].name;
+            document.getElementById('demo-service').textContent = theme;
+            
+            // Update button states
+            document.querySelectorAll('.theme-btn').forEach(btn => {
+                btn.classList.remove('ring-2', 'ring-white', 'ring-opacity-50');
+            });
+            event.target.closest('.theme-btn').classList.add('ring-2', 'ring-white', 'ring-opacity-50');
+            
+            // Apply new theme
+            const settings = getCurrentSettings();
+            ShimmeringBackground.init(theme, settings);
+        }
+        
+        function getCurrentSettings() {
+            return {
+                particleCount: parseInt(document.getElementById('particle-count').value),
+                opacity: parseFloat(document.getElementById('opacity').value)
+            };
+        }
+        
+        function applySettings() {
+            const settings = getCurrentSettings();
+            ShimmeringBackground.init(currentTheme, settings);
+        }
+        
+        function resetSettings() {
+            document.getElementById('particle-count').value = 50;
+            document.getElementById('opacity').value = 0.15;
+            updateControlValues();
+            ShimmeringBackground.init(currentTheme);
+        }
+        
+        function updateControlValues() {
+            document.getElementById('particle-count-value').textContent = document.getElementById('particle-count').value;
+            document.getElementById('opacity-value').textContent = document.getElementById('opacity').value;
+        }
+        
+        // Update control value displays
+        document.getElementById('particle-count').addEventListener('input', updateControlValues);
+        document.getElementById('opacity').addEventListener('input', updateControlValues);
+        
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            updateControlValues();
+            // Start with DTF theme
+            setTimeout(() => {
+                document.querySelector('[onclick="switchTheme(\'dtf\')"]').click();
+            }, 500);
+        });
+    </script>
+</body>
+</html>
