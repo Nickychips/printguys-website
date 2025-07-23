@@ -1,6 +1,6 @@
 # PrintGuys Website - Problem Tracking & Solutions
 
-*Last Updated: July 22, 2025*
+*Last Updated: July 23, 2025*
 
 ## 📋 PROBLEM TRACKING SYSTEM
 
@@ -16,6 +16,77 @@ This document tracks all problems encountered during the PrintGuys website devel
 ---
 
 ## ✅ RESOLVED ISSUES
+
+### RESOLVED-006: Enhanced Visual Appeal Request
+**Date**: July 23, 2025
+**Category**: Visual Enhancement
+**Priority**: Medium
+
+**Problem Description**:
+Request to add a shimmering background effect similar to Netlify's website that would correspond to each service page's color theme to enhance visual appeal and user engagement.
+
+**Requirements**:
+- Service-specific color themes for each printing method
+- Subtle animation that doesn't interfere with readability
+- Mobile-responsive design
+- Accessibility compliance (respects reduced motion preferences)
+- Performance optimization
+
+**Solution Implemented**:
+1. Created `ShimmeringBackground` JavaScript class with service auto-detection
+2. Implemented color themes for all services:
+   - DTF: Red theme (`#dc2626`, `#ef4444`)
+   - Sublimation: Purple theme (`#bb54db`, `#8e3aab`)  
+   - Screen Printing: Blue theme (`#3b82f6`, `#1d4ed8`)
+   - Embroidery: Yellow/Gold theme (`#eab308`, `#ca8a04`)
+   - UV DTF Stickers: Green theme (`#10b981`, `#047857`)
+   - Large Format: Orange theme (`#f59e0b`, `#d97706`)
+3. Added CSS3-based animations for optimal performance
+4. Implemented responsive design with mobile optimizations
+5. Added accessibility support for `prefers-reduced-motion`
+
+**Files Created**:
+- `/components/effects/shimmering-background.js` - Main effect component
+- `/demo/shimmering-effects.html` - Interactive demo page
+- `/documentation/shimmering-background-guide.md` - Implementation guide
+
+**Files Modified**:
+- `/dtf.html` - Added effect with proper z-index layering
+
+**Technical Implementation**:
+```javascript
+// Auto-initialization
+<script src="/components/effects/shimmering-background.js"></script>
+
+// Manual initialization with options
+ShimmeringBackground.init('dtf', {
+    particleCount: 50,
+    opacity: 0.15,
+    animationDuration: 20000
+});
+```
+
+**Z-Index Layering Solution**:
+```html
+<!-- Content sections need relative z-10 positioning -->
+<header class="bg-black border-b border-red-600 relative z-10">
+<section class="hero-gradient py-20 lg:py-32 relative z-10">
+```
+
+**Prevention Measures**:
+- Created comprehensive implementation guide
+- Added demo page for testing and customization
+- Documented all configuration options
+- Included troubleshooting section
+
+**Status**: ✅ RESOLVED
+**Verification**: 
+- DTF page implemented with red shimmering effect
+- Demo page functional with all service themes
+- Mobile responsiveness tested
+- Accessibility compliance verified
+
+---
 
 ### RESOLVED-001: File Size Optimization
 **Date**: July 10, 2025
@@ -248,6 +319,28 @@ When components are updated, changes need to be manually synchronized across all
 
 ## 🛠️ COMMON SOLUTIONS & PATTERNS
 
+### Shimmering Background Implementation
+**Standard Solution**:
+```html
+<!-- Add to any service page -->
+<script src="/components/effects/shimmering-background.js"></script>
+
+<!-- Ensure proper z-index layering -->
+<header class="bg-black border-b border-service-600 relative z-10">
+<section class="hero-gradient py-20 lg:py-32 relative z-10">
+```
+
+```javascript
+// Manual initialization if needed
+ShimmeringBackground.init('service-name', {
+    particleCount: 50,
+    opacity: 0.15
+});
+
+// Auto-detect service from URL
+ShimmeringBackground.autoInit();
+```
+
 ### Mobile Menu Implementation
 **Standard Solution**:
 ```javascript
@@ -319,6 +412,7 @@ Before any page or component deployment:
    - [ ] Images optimized and lazy-loaded
    - [ ] Page loads under 3 seconds
    - [ ] No console errors or warnings
+   - [ ] Shimmering effects don't impact performance
 
 4. **SEO Compliance**
    - [ ] Unique meta description
@@ -329,6 +423,13 @@ Before any page or component deployment:
    - [ ] Proper ARIA labels
    - [ ] Keyboard navigation works
    - [ ] Color contrast meets WCAG guidelines
+   - [ ] Respects prefers-reduced-motion
+
+6. **Visual Effects**
+   - [ ] Shimmering background loads correctly
+   - [ ] Content properly layered above background (z-index)
+   - [ ] Effects respect user motion preferences
+   - [ ] Service-specific colors display correctly
 
 ### Code Quality Standards
 - Use semantic HTML elements
@@ -336,6 +437,7 @@ Before any page or component deployment:
 - Comment complex JavaScript functions
 - Validate HTML and CSS syntax
 - Test across multiple browsers
+- Implement proper z-index hierarchy
 
 ---
 
@@ -348,16 +450,17 @@ Before any page or component deployment:
 - **Low Priority**: Next development cycle
 
 ### Current Statistics
-- **Total Issues Logged**: 5
-- **Issues Resolved**: 5 (100%)
-- **Average Resolution Time**: 2.4 days
+- **Total Issues Logged**: 6
+- **Issues Resolved**: 6 (100%)
+- **Average Resolution Time**: 2.2 days
 - **Recurring Issues**: 1
 
 ### Most Common Issue Categories
-1. User Experience (40%)
-2. Performance (20%)
-3. Development Standards (20%)
-4. SEO/Marketing (20%)
+1. User Experience (33%)
+2. Visual Enhancement (17%)
+3. Performance (17%)
+4. Development Standards (17%)
+5. SEO/Marketing (16%)
 
 ---
 
@@ -368,12 +471,15 @@ Before any page or component deployment:
 2. **Mobile-First Testing**: Testing mobile functionality early prevents user experience issues
 3. **Performance Budget**: Setting performance targets upfront helps maintain fast loading times
 4. **Documentation**: Detailed problem tracking prevents repeated issues
+5. **Visual Enhancement**: Subtle animations can enhance user experience without compromising usability
 
 ### Best Practices Developed
 - Regular component audits prevent synchronization issues
 - Standardized validation patterns improve form reliability
 - Performance testing at each development stage
 - SEO consideration in initial development rather than as afterthought
+- Proper z-index hierarchy planning for layered effects
+- Accessibility-first approach to visual enhancements
 
 ---
 
@@ -384,6 +490,7 @@ Before any page or component deployment:
 - Performance degradation affecting user experience
 - Security-related concerns
 - Issues requiring architectural changes
+- Visual effects causing accessibility problems
 
 ### Contact Information
 - **Project Lead**: Repository Issues
