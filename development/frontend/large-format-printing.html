@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Large Format Printing Canada | PrintGuys Professional Wide Format Signs & Banners</title>
+    <meta name="description" content="Professional large format printing in Canada. Banners, signs, vehicle wraps, trade show displays. Weather-resistant, high-impact graphics for indoor and outdoor use.">
+    <link rel="icon" type="image/png" href="/assets/images/logo/printguys logotb.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .hero-gradient { background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #000000 100%); }
+        .text-gradient { background: linear-gradient(135deg, #ef4444, #dc2626); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .contact-banner { background-color: #dc2626; }
+        .floating-cta { position: fixed; bottom: 20px; right: 20px; z-index: 1000; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); }
+        @media (max-width: 768px) { .floating-cta { bottom: 10px; right: 10px; } }
+    </style>
+</head>
+<body class="bg-black text-white">
+
+    <!-- Contact Banner -->
+    <div class="contact-banner py-2 px-4">
+        <div class="container mx-auto">
+            <div class="flex flex-col sm:flex-row items-center justify-center text-center sm:text-left">
+                <div class="text-white font-semibold">
+                    <span class="mr-4">Contact Nick:</span>
+                    <a href="tel:6476856286" class="hover:underline font-bold mr-4">647-685-6286</a>
+                    <span class="hidden sm:inline">|</span>
+                    <a href="mailto:printguys.ca@gmail.com" class="hover:underline font-bold sm:ml-4 block sm:inline mt-1 sm:mt-0">printguys.ca@gmail.com</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header Navigation -->
+    <header class="bg-black border-b border-red-600">
+        <div class="container mx-auto px-4">
+            <nav class="flex items-center justify-between py-4">
+                <div class="flex items-center">
+                    <a href="/"><img src="/assets/images/logo/printguys logotb.png" alt="PrintGuys Logo" class="h-8 md:h-10"></a>
+                </div>
+                
+                <div class="hidden md:flex space-x-8">
+                    <a href="/" class="text-white hover:text-red-500 transition-colors">Home</a>
+                    <a href="/about" class="text-white hover:text-red-500 transition-colors">About Us</a>
+                    <a href="/blog" class="text-white hover:text-red-500 transition-colors">Blog</a>
+                    <a href="/contact" class="text-white hover:text-red-500 transition-colors">Contact</a>
+                </div>
+
+                <div class="hidden md:block">
+                    <a href="/contact" class="bg-red-600 text-white px-6 py-2 rounded-lg font-bold hover:bg-red-700 transition-colors">Get Quote</a>
+                </div>
+
+                <button class="md:hidden text-white" id="mobile-menu-btn">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </nav>
+
+            <div class="md:hidden hidden" id="mobile-menu">
+                <div class="py-4 space-y-4 border-t border-red-600">
+                    <a href="/" class="block text-white hover:text-red-500">Home</a>
+                    <a href="/about" class="block text-white hover:text-red-500">About Us</a>
+                    <a href="/blog" class="block text-white hover:text-red-500">Blog</a>
+                    <a href="/contact" class="block text-white hover:text-red-500">Contact</a>
+                    <a href="/contact" class="block bg-red-600 text-white px-4 py-2 rounded-lg font-bold text-center">Get Quote</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient py-20 lg:py-32">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-4xl mx-auto">
+                <h1 class="text-4xl lg:text-6xl font-bold mb-6">Professional <span class="text-gradient">Large Format</span><br>Printing</h1>
+                <p class="text-xl text-gray-300 mb-6">High-impact signage, banners, and displays for maximum visibility</p>
+                
+                <div class="text-lg text-gray-300 mb-8 leading-relaxed">
+                    Large format printing delivers oversized graphics that standard printers can't handle. From banners to vehicle wraps, we create bold, vibrant visuals designed for impact at scale.
+                </div>
+                
+                <!-- Key Features -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-orange-500 mb-2">Oversized</div>
+                        <div class="text-gray-400 text-sm">Up to 10ft+ Wide</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-orange-500 mb-2">24-48hrs</div>
+                        <div class="text-gray-400 text-sm">Fast Turnaround</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-orange-500 mb-2">Weather</div>
+                        <div class="text-gray-400 text-sm">Resistant</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-orange-500 mb-2">HD Print</div>
+                        <div class="text-gray-400 text-sm">Vibrant Colors</div>
+                    </div>
+                </div>
+
+                <!-- CTA Buttons -->
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="/contact" class="bg-orange-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-orange-700 transition-colors">Get Large Format Quote</a>
+                    <a href="tel:6476856286" class="bg-transparent border-2 border-orange-600 text-orange-500 px-8 py-4 rounded-lg font-bold text-lg hover:bg-orange-600 hover:text-white transition-colors">Call: 647-685-6286</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What is Large Format Printing -->
+    <section class="py-16 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl font-bold text-white mb-8 text-center">What is Large Format Printing?</h2>
+                
+                <div class="bg-black rounded-xl p-8 mb-12">
+                    <p class="text-lg text-gray-300 leading-relaxed">
+                        <strong class="text-orange-500">Large format printing</strong> (also called wide-format printing) uses digital printing processes to produce oversized graphics that standard printers can't handle. Using roll-fed or flatbed inkjet printers, we deliver high-resolution output on diverse materials—perfect for signage, banners, vehicle wraps, and displays designed for visual impact at scale.
+                    </p>
+                </div>
+
+                <!-- Process Steps -->
+                <div class="grid grid-cols-1 md:grid-cols-5 gap-6">
+                    <div class="bg-black rounded-xl p-6 text-center">
+                        <div class="w-12 h-12 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-xl font-bold text-white">1</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2">Design Prep</h3>
+                        <p class="text-gray-400 text-sm">Artwork prepared at full size with attention to resolution and bleed areas</p>
+                    </div>
+
+                    <div class="bg-black rounded-xl p-6 text-center">
+                        <div class="w-12 h-12 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-xl font-bold text-white">2</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2">Material Select</h3>
+                        <p class="text-gray-400 text-sm">Choose from vinyl, fabric, canvas, foam board, or rigid substrates</p>
+                    </div>
+
+                    <div class="bg-black rounded-xl p-6 text-center">
+                        <div class="w-12 h-12 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-xl font-bold text-white">3</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2">Large Format Print</h3>
+                        <p class="text-gray-400 text-sm">Industrial printers deposit UV or latex inks onto substrate</p>
+                    </div>
+
+                    <div class="bg-black rounded-xl p-6 text-center">
+                        <div class="w-12 h-12 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-xl font-bold text-white">4</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2">Finishing</h3>
+                        <p class="text-gray-400 text-sm">Laminating, trimming, mounting, or grommeting as needed</p>
+                    </div>
+
+                    <div class="bg-black rounded-xl p-6 text-center">
+                        <div class="w-12 h-12 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-xl font-bold text-white">5</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2">Installation</h3>
+                        <p class="text-gray-400 text-sm">Professional installation for complex applications when needed</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits & Applications -->
+    <section class="py-16 bg-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    <!-- Benefits -->
+                    <div>
+                        <h2 class="text-3xl font-bold text-white mb-8">Why Choose Large Format?</h2>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <div class="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center mr-3 mt-1">
+                                    <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-bold text-white">Oversized Capability</h3>
+                                    <p class="text-gray-400 text-sm">Print massive sizes up to 10+ feet wide seamlessly</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div class="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center mr-3 mt-1">
+                                    <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-bold text-white">High Visual Impact</h3>
+                                    <p class="text-gray-400 text-sm">Crisp, vibrant graphics perfect for marketing and advertising</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div class="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center mr-3 mt-1">
+                                    <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-bold text-white">Diverse Materials</h3>
+                                    <p class="text-gray-400 text-sm">Print on vinyl, fabric, metal, foam board, acrylic, and more</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div class="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center mr-3 mt-1">
+                                    <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-bold text-white">Weather Resistant</h3>
+                                    <p class="text-gray-400 text-sm">UV and weather-resistant inks for indoor and outdoor use</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Applications -->
+                    <div>
+                        <h2 class="text-3xl font-bold text-white mb-8">Perfect For</h2>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="bg-black rounded-lg p-4">
+                                <h3 class="text-orange-500 font-bold mb-2">Advertising</h3>
+                                <ul class="text-gray-400 text-sm space-y-1">
+                                    <li>• Outdoor banners</li>
+                                    <li>• Window graphics</li>
+                                    <li>• POP displays</li>
+                                    <li>• Storefront signs</li>
+                                </ul>
+                            </div>
+
+                            <div class="bg-black rounded-lg p-4">
+                                <h3 class="text-orange-500 font-bold mb-2">Events</h3>
+                                <ul class="text-gray-400 text-sm space-y-1">
+                                    <li>• Trade show displays</li>
+                                    <li>• Step & repeat backdrops</li>
+                                    <li>• Wayfinding signs</li>
+                                    <li>• Hanging fabric signs</li>
+                                </ul>
+                            </div>
+
+                            <div class="bg-black rounded-lg p-4">
+                                <h3 class="text-orange-500 font-bold mb-2">Business</h3>
+                                <ul class="text-gray-400 text-sm space-y-1">
+                                    <li>• Job site signs</li>
+                                    <li>• Real estate signs</li>
+                                    <li>• Coroplast signs</li>
+                                    <li>• Safety messaging</li>
+                                </ul>
+                            </div>
+
+                            <div class="bg-black rounded-lg p-4">
+                                <h3 class="text-orange-500 font-bold mb-2">Vehicle & Art</h3>
+                                <ul class="text-gray-400 text-sm space-y-1">
+                                    <li>• Vehicle wraps</li>
+                                    <li>• Canvas prints</li>
+                                    <li>• Acrylic displays</li>
+                                    <li>• Wall murals</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Materials & Sizes -->
+    <section class="py-16 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl font-bold text-white mb-8 text-center">Materials & Specifications</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                    <div class="bg-black rounded-xl p-6">
+                        <h3 class="text-xl font-bold text-orange-500 mb-4">📏 Size Capabilities</h3>
+                        <div class="space-y-3 text-gray-300">
+                            <div class="flex justify-between">
+                                <span>Maximum width:</span>
+                                <span class="font-bold text-orange-500">10+ feet</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Length:</span>
+                                <span>Virtually unlimited</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Standard banner:</span>
+                                <span>3' x 6' to 4' x 8'</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Trade show backdrop:</span>
+                                <span>8' x 10' typical</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-black rounded-xl p-6">
+                        <h3 class="text-xl font-bold text-orange-500 mb-4">🎨 Available Materials</h3>
+                        <div class="grid grid-cols-2 gap-2 text-gray-300 text-sm">
+                            <div>• Vinyl banners</div>
+                            <div>• Canvas</div>
+                            <div>• Adhesive vinyl</div>
+                            <div>• Fabric displays</div>
+                            <div>• Coroplast</div>
+                            <div>• Foam board</div>
+                            <div>• Acrylic panels</div>
+                            <div>• Aluminum sheets</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- File Requirements -->
+                <div class="bg-black rounded-xl p-6">
+                    <h3 class="text-xl font-bold text-orange-500 mb-4">📁 File Requirements</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <h4 class="font-bold text-white mb-2">✅ Preferred Formats</h4>
+                            <ul class="text-gray-400 text-sm space-y-1">
+                                <li>• Vector files (AI, EPS, PDF) - Best</li>
+                                <li>• High-res raster (300 DPI minimum)</li>
+                                <li>• PSD with layers</li>
+                                <li>• Large TIFF files</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-white mb-2">⚠️ Design Considerations</h4>
+                            <ul class="text-gray-400 text-sm space-y-1">
+                                <li>• Include 2" bleed on all sides</li>
+                                <li>• Keep text 1" from edges</li>
+                                <li>• Consider viewing distance</li>
+                                <li>• High contrast for outdoor use</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases -->
+    <section class="py-16 bg-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-3xl font-bold text-white mb-8 text-center">Common Applications</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-black rounded-xl p-6">
+                        <div class="w-12 h-12 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3 text-center">Retail & Business</h3>
+                        <ul class="text-gray-400 text-sm space-y-2">
+                            <li>• Seasonal campaign graphics</li>
+                            <li>• Grand opening banners</li>
+                            <li>• Sale and promotion signs</li>
+                            <li>• Directional wayfinding</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-black rounded-xl p-6">
+                        <div class="w-12 h-12 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3 text-center">Events & Shows</h3>
+                        <ul class="text-gray-400 text-sm space-y-2">
+                            <li>• Trade show booth displays</li>
+                            <li>• Conference backdrops</li>
+                            <li>• Photo opportunity backgrounds</li>
+                            <li>• Hanging fabric banners</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-black rounded-xl p-6">
+                        <div class="w-12 h-12 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2-2 2 2 0 00-2 2"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3 text-center">Construction & Real Estate</h3>
+                        <ul class="text-gray-400 text-sm space-y-2">
+                            <li>• Job site safety signage</li>
+                            <li>• Real estate yard signs</li>
+                            <li>• Development project boards</li>
+                            <li>• Architectural renderings</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="text-3xl font-bold text-white mb-6">Ready for High-Impact Graphics?</h2>
+                <p class="text-lg text-gray-300 mb-8">Professional large format printing with no minimum order requirements</p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="/contact" class="bg-orange-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-orange-700 transition-colors">Get Your Quote Today</a>
+                    <a href="mailto:printguys.ca@gmail.com?subject=Large Format Quote Request" class="bg-transparent border-2 border-orange-600 text-orange-500 px-8 py-4 rounded-lg font-bold text-lg hover:bg-orange-600 hover:text-white transition-colors">Email Your Design</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating CTA -->
+    <div class="floating-cta">
+        <a href="/contact" class="bg-orange-600 text-white px-6 py-3 rounded-full font-bold hover:bg-orange-700 transition-colors flex items-center shadow-lg">
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+            </svg>
+            Get Quote
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-black border-t border-red-600 py-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-center md:text-left">
+                <div>
+                    <img src="/assets/images/logo/printguys logotb.png" alt="PrintGuys Logo" class="h-8 mx-auto md:mx-0 mb-4">
+                    <p class="text-gray-400">Professional large format printing across Canada</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-4">Contact Nick</h4>
+                    <div class="space-y-2 text-gray-400">
+                        <div><a href="tel:6476856286" class="text-white hover:text-red-500 font-bold">647-685-6286</a></div>
+                        <div><a href="mailto:printguys.ca@gmail.com" class="text-white hover:text-red-500 font-bold">printguys.ca@gmail.com</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-4 text-center">
+                <p class="text-gray-400">&copy; 2025 PrintGuys. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
