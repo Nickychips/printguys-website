@@ -8,17 +8,73 @@
     <link rel="icon" type="image/png" href="/assets/images/logo/printguys logotb.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        .hero-gradient { background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #000000 100%); }
-        .text-gradient { background: linear-gradient(135deg, #ef4444, #dc2626); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .hero-gradient { 
+            background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #000000 100%); 
+            position: relative;
+            overflow: hidden;
+        }
+        .text-gradient { 
+            background: linear-gradient(135deg, #ef4444, #dc2626); 
+            -webkit-background-clip: text; 
+            -webkit-text-fill-color: transparent; 
+            background-clip: text; 
+        }
         .contact-banner { background-color: #dc2626; }
-        .floating-cta { position: fixed; bottom: 20px; right: 20px; z-index: 1000; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); }
-        @media (max-width: 768px) { .floating-cta { bottom: 10px; right: 10px; } }
+        .floating-cta { 
+            position: fixed; 
+            bottom: 20px; 
+            right: 20px; 
+            z-index: 1000; 
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); 
+        }
+        
+        /* Enhanced visual effects */
+        .glow-effect {
+            box-shadow: 0 0 20px rgba(220, 38, 38, 0.3);
+            transition: box-shadow 0.3s ease;
+        }
+        
+        .glow-effect:hover {
+            box-shadow: 0 0 30px rgba(220, 38, 38, 0.5);
+        }
+        
+        .pulse-glow {
+            animation: pulse-glow 2s ease-in-out infinite;
+        }
+        
+        @keyframes pulse-glow {
+            0%, 100% {
+                box-shadow: 0 0 20px rgba(220, 38, 38, 0.3);
+            }
+            50% {
+                box-shadow: 0 0 40px rgba(220, 38, 38, 0.6);
+            }
+        }
+        
+        .hover-lift {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .hover-lift:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Background layer management */
+        .content-layer {
+            position: relative;
+            z-index: 10;
+        }
+        
+        @media (max-width: 768px) { 
+            .floating-cta { bottom: 10px; right: 10px; } 
+        }
     </style>
 </head>
 <body class="bg-black text-white">
 
     <!-- Contact Banner -->
-    <div class="contact-banner py-2 px-4">
+    <div class="contact-banner py-2 px-4 content-layer">
         <div class="container mx-auto">
             <div class="flex flex-col sm:flex-row items-center justify-center text-center sm:text-left">
                 <div class="text-white font-semibold">
@@ -32,7 +88,7 @@
     </div>
 
     <!-- Header Navigation -->
-    <header class="bg-black border-b border-red-600">
+    <header class="bg-black border-b border-red-600 content-layer">
         <div class="container mx-auto px-4">
             <nav class="flex items-center justify-between py-4">
                 <div class="flex items-center">
@@ -47,7 +103,7 @@
                 </div>
 
                 <div class="hidden md:block">
-                    <a href="/contact" class="bg-red-600 text-white px-6 py-2 rounded-lg font-bold hover:bg-red-700 transition-colors">Get Quote</a>
+                    <a href="/contact" class="bg-red-600 text-white px-6 py-2 rounded-lg font-bold hover:bg-red-700 transition-colors glow-effect">Get Quote</a>
                 </div>
 
                 <button class="md:hidden text-white" id="mobile-menu-btn">
@@ -70,7 +126,7 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero-gradient py-20 lg:py-32">
+    <section class="hero-gradient py-20 lg:py-32 content-layer">
         <div class="container mx-auto px-4">
             <div class="text-center max-w-5xl mx-auto">
                 <h1 class="text-5xl lg:text-7xl font-bold mb-6">Professional <span class="text-gradient">Custom Printing</span><br>Services</h1>
@@ -94,15 +150,15 @@
                 
                 <!-- Key Stats -->
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-                    <div class="text-center">
+                    <div class="text-center hover-lift">
                         <div class="text-4xl font-bold text-red-500 mb-2">2-5 Days</div>
                         <div class="text-gray-400">Fast Turnaround</div>
                     </div>
-                    <div class="text-center">
+                    <div class="text-center hover-lift">
                         <div class="text-4xl font-bold text-red-500 mb-2">Quality</div>
                         <div class="text-gray-400">Professional Results</div>
                     </div>
-                    <div class="text-center">
+                    <div class="text-center hover-lift">
                         <div class="text-4xl font-bold text-red-500 mb-2">No Min</div>
                         <div class="text-gray-400">Order Requirements</div>
                     </div>
@@ -110,19 +166,19 @@
 
                 <!-- CTA Buttons -->
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="/contact" class="bg-red-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-red-700 transition-colors">Get Quote</a>
-                    <a href="mailto:printguys.ca@gmail.com?subject=Design Upload" class="bg-transparent border-2 border-red-600 text-red-500 px-8 py-4 rounded-lg font-bold text-lg hover:bg-red-600 hover:text-white transition-colors">Send Design</a>
+                    <a href="/contact" class="bg-red-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-red-700 transition-colors pulse-glow hover-lift">Get Quote</a>
+                    <a href="mailto:printguys.ca@gmail.com?subject=Design Upload" class="bg-transparent border-2 border-red-600 text-red-500 px-8 py-4 rounded-lg font-bold text-lg hover:bg-red-600 hover:text-white transition-colors hover-lift">Send Design</a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Services Preview -->
-    <div id="services-section"></div>
+    <div id="services-section" class="content-layer"></div>
 
     <!-- Floating CTA -->
     <div class="floating-cta">
-        <a href="/contact" class="bg-red-600 text-white px-6 py-3 rounded-full font-bold hover:bg-red-700 transition-colors flex items-center shadow-lg">
+        <a href="/contact" class="bg-red-600 text-white px-6 py-3 rounded-full font-bold hover:bg-red-700 transition-colors flex items-center shadow-lg glow-effect">
             <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
             </svg>
@@ -131,7 +187,7 @@
     </div>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 border-t border-red-600 py-12">
+    <footer class="bg-gray-900 border-t border-red-600 py-12 content-layer">
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-center md:text-left">
                 <div>
@@ -162,6 +218,10 @@
         </div>
     </footer>
 
+    <!-- Background Effects Scripts -->
+    <script src="/components/effects/shimmering-background.js"></script>
+    <script src="/components/effects/dynamic-background-effects.js"></script>
+
     <!-- JavaScript -->
     <script>
         // Mobile menu functionality
@@ -188,6 +248,25 @@
                 document.getElementById('services-section').innerHTML = data;
             })
             .catch(error => console.log('Services component not found, using fallback'));
+
+        // Initialize background effects with enhanced settings for homepage
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize both effect systems
+            if (window.ShimmeringBackground) {
+                ShimmeringBackground.init('default', {
+                    particleCount: 40,
+                    opacity: 0.12
+                });
+            }
+
+            if (window.DynamicBackgroundEffects) {
+                DynamicBackgroundEffects.init('homepage', {
+                    intensity: 'medium',
+                    particleCount: 25,
+                    opacity: 0.08
+                });
+            }
+        });
     </script>
 </body>
 </html>
