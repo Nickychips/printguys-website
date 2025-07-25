@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Vinyl Banners Canada | Large Format Vinyl Printing | PrintGuys</title>
+    <meta name="description" content="Professional custom vinyl banners in Canada. Weather-resistant, full-color vinyl banner printing for indoor/outdoor use. No minimums. Fast 2-5 day turnaround.">
+    <meta name="keywords" content="custom vinyl banners Canada, large format vinyl printing, outdoor banners, weather resistant vinyl, promotional banners, business signage">
+    <link rel="icon" type="image/png" href="/assets/images/logo/printguys logotb.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .hero-gradient { 
+            background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #000000 100%); 
+            position: relative;
+            overflow: hidden;
+        }
+        .text-gradient { 
+            background: linear-gradient(135deg, #f59e0b, #d97706); 
+            -webkit-background-clip: text; 
+            -webkit-text-fill-color: transparent; 
+            background-clip: text; 
+        }
+        .contact-banner { background-color: #dc2626; }
+        .content-layer { position: relative; z-index: 10; }
+        .glow-effect {
+            box-shadow: 0 0 20px rgba(245, 158, 11, 0.3);
+            transition: box-shadow 0.3s ease;
+        }
+        .glow-effect:hover {
+            box-shadow: 0 0 30px rgba(245, 158, 11, 0.5);
+        }
+        .hover-lift {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .hover-lift:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+        .floating-cta { 
+            position: fixed; 
+            bottom: 20px; 
+            right: 20px; 
+            z-index: 1000; 
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); 
+        }
+        @media (max-width: 768px) { 
+            .floating-cta { bottom: 10px; right: 10px; } 
+        }
+    </style>
+</head>
+<body class="bg-black text-white">
+
+    <!-- Contact Banner -->
+    <div class="contact-banner py-2 px-4 content-layer">
+        <div class="container mx-auto">
+            <div class="flex flex-col sm:flex-row items-center justify-center text-center sm:text-left">
+                <div class="text-white font-semibold">
+                    <span class="mr-4">Contact Nick:</span>
+                    <a href="tel:6476856286" class="hover:underline font-bold mr-4">647-685-6286</a>
+                    <span class="hidden sm:inline">|</span>
+                    <a href="mailto:printguys.ca@gmail.com" class="hover:underline font-bold sm:ml-4 block sm:inline mt-1 sm:mt-0">printguys.ca@gmail.com</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header Navigation -->
+    <header class="bg-black border-b border-red-600 content-layer">
+        <div class="container mx-auto px-4">
+            <nav class="flex items-center justify-between py-4">
+                <div class="flex items-center">
+                    <a href="/"><img src="/assets/images/logo/printguys logotb.png" alt="PrintGuys Logo" class="h-8 md:h-10"></a>
+                </div>
+                
+                <div class="hidden md:flex space-x-8">
+                    <a href="/" class="text-white hover:text-red-500 transition-colors">Home</a>
+                    <a href="/about" class="text-white hover:text-red-500 transition-colors">About Us</a>
+                    <a href="/blog" class="text-white hover:text-red-500 transition-colors">Blog</a>
+                    <a href="/contact" class="text-white hover:text-red-500 transition-colors">Contact</a>
+                </div>
+
+                <div class="hidden md:block">
+                    <a href="/contact" class="bg-orange-600 text-white px-6 py-2 rounded-lg font-bold hover:bg-orange-700 transition-colors glow-effect">Get Quote</a>
+                </div>
+
+                <button class="md:hidden text-white" id="mobile-menu-btn">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </nav>
+
+            <div class="md:hidden hidden" id="mobile-menu">
+                <div class="py-4 space-y-4 border-t border-red-600">
+                    <a href="/" class="block text-white hover:text-red-500">Home</a>
+                    <a href="/about" class="block text-white hover:text-red-500">About Us</a>
+                    <a href="/blog" class="block text-white hover:text-red-500">Blog</a>
+                    <a href="/contact" class="block text-white hover:text-red-500">Contact</a>
+                    <a href="/contact" class="block bg-orange-600 text-white px-4 py-2 rounded-lg font-bold text-center">Get Quote</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="bg-gray-900 py-4 content-layer">
+        <div class="container mx-auto px-4">
+            <nav class="flex" aria-label="Breadcrumb">
+                <ol class="inline-flex items-center space-x-1 md:space-x-3">
+                    <li class="inline-flex items-center">
+                        <a href="/" class="inline-flex items-center text-gray-400 hover:text-orange-500">
+                            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path>
+                            </svg>
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <div class="flex items-center">
+                            <svg class="w-6 h-6 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            <a href="/large-format-printing" class="ml-1 text-gray-400 hover:text-orange-500 md:ml-2">Large Format Printing</a>
+                        </div>
+                    </li>
+                    <li aria-current="page">
+                        <div class="flex items-center">
+                            <svg class="w-6 h-6 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="ml-1 text-orange-500 font-medium md:ml-2">Custom Vinyl Banners</span>
+                        </div>
+                    </li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Load Hero Component -->
+    <div id="vinyl-hero-section"></div>
+
+    <!-- Load Product Types Component -->
+    <div id="vinyl-products-section"></div>
+
+    <!-- Load Specifications Component -->
+    <div id="vinyl-specs-section"></div>
+
+    <!-- Load Applications Component -->
+    <div id="vinyl-applications-section"></div>
+
+    <!-- Load CTA Component -->
+    <div id="vinyl-cta-section"></div>
+
+    <!-- Floating CTA -->
+    <div class="floating-cta">
+        <a href="/contact" class="bg-orange-600 text-white px-6 py-3 rounded-full font-bold hover:bg-orange-700 transition-colors flex items-center shadow-lg glow-effect">
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+            </svg>
+            Get Quote
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-black border-t border-red-600 py-8 content-layer">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-center md:text-left">
+                <div>
+                    <img src="/assets/images/logo/printguys logotb.png" alt="PrintGuys Logo" class="h-8 mx-auto md:mx-0 mb-4">
+                    <p class="text-gray-400">Professional vinyl banner printing across Canada</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-4">Contact Nick</h4>
+                    <div class="space-y-2 text-gray-400">
+                        <div><a href="tel:6476856286" class="text-white hover:text-red-500 font-bold">647-685-6286</a></div>
+                        <div><a href="mailto:printguys.ca@gmail.com" class="text-white hover:text-red-500 font-bold">printguys.ca@gmail.com</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-4 text-center">
+                <p class="text-gray-400">&copy; 2025 PrintGuys. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Background Effects Scripts -->
+    <script src="/components/effects/shimmering-background.js"></script>
+    <script src="/components/effects/dynamic-background-effects.js"></script>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile menu functionality
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Load all vinyl banner components
+        async function loadComponents() {
+            try {
+                // Load Hero Section
+                const heroResponse = await fetch('/components/vinyl/vinyl-hero.html');
+                if (heroResponse.ok) {
+                    const heroData = await heroResponse.text();
+                    document.getElementById('vinyl-hero-section').innerHTML = heroData;
+                }
+
+                // Load Product Types
+                const productsResponse = await fetch('/components/vinyl/vinyl-products.html');
+                if (productsResponse.ok) {
+                    const productsData = await productsResponse.text();
+                    document.getElementById('vinyl-products-section').innerHTML = productsData;
+                }
+
+                // Load Specifications
+                const specsResponse = await fetch('/components/vinyl/vinyl-specs.html');
+                if (specsResponse.ok) {
+                    const specsData = await specsResponse.text();
+                    document.getElementById('vinyl-specs-section').innerHTML = specsData;
+                }
+
+                // Load Applications
+                const appsResponse = await fetch('/components/vinyl/vinyl-applications.html');
+                if (appsResponse.ok) {
+                    const appsData = await appsResponse.text();
+                    document.getElementById('vinyl-applications-section').innerHTML = appsData;
+                }
+
+                // Load CTA Section
+                const ctaResponse = await fetch('/components/vinyl/vinyl-cta.html');
+                if (ctaResponse.ok) {
+                    const ctaData = await ctaResponse.text();
+                    document.getElementById('vinyl-cta-section').innerHTML = ctaData;
+                }
+
+            } catch (error) {
+                console.log('Component loading failed, using fallback');
+            }
+        }
+
+        // Initialize background effects
+        document.addEventListener('DOMContentLoaded', function() {
+            loadComponents();
+            
+            if (window.ShimmeringBackground) {
+                ShimmeringBackground.init('large-format', {
+                    particleCount: 30,
+                    opacity: 0.1
+                });
+            }
+
+            if (window.DynamicBackgroundEffects) {
+                DynamicBackgroundEffects.init('homepage', {
+                    intensity: 'low',
+                    particleCount: 20,
+                    opacity: 0.08
+                });
+            }
+        });
+    </script>
+</body>
+</html>
