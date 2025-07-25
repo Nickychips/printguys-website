@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Large Format Printing Canada | PrintGuys Professional Wide Format Signs & Banners</title>
+    <meta name="description" content="Professional large format printing in Canada. Banners, signs, vehicle wraps, trade show displays. Weather-resistant, high-impact graphics for indoor and outdoor use.">
+    <link rel="icon" type="image/png" href="/assets/images/logo/printguys logotb.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-black text-white">
+
+    <!-- Contact Banner Component -->
+    <div id="contact-banner-placeholder"></div>
+
+    <!-- Header Navigation Component -->
+    <div id="header-navigation-placeholder"></div>
+
+    <!-- Hero Section Component -->
+    <div id="large-format-hero-placeholder"></div>
+
+    <!-- What is Large Format Printing Component -->
+    <div id="large-format-explanation-placeholder"></div>
+
+    <!-- Benefits & Applications Component -->
+    <div id="large-format-benefits-placeholder"></div>
+
+    <!-- Materials & Specifications Component -->
+    <div id="large-format-specifications-placeholder"></div>
+
+    <!-- Use Cases Component -->
+    <div id="large-format-use-cases-placeholder"></div>
+
+    <!-- CTA Section Component -->
+    <div id="large-format-cta-placeholder"></div>
+
+    <!-- Floating CTA Component -->
+    <div id="floating-cta-placeholder"></div>
+
+    <!-- Footer Component -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Component Loading Script -->
+    <script>
+        // Simple component loader function
+        async function loadComponent(elementId, componentPath) {
+            try {
+                const response = await fetch(componentPath);
+                const html = await response.text();
+                const element = document.getElementById(elementId);
+                if (element) {
+                    element.innerHTML = html;
+                    
+                    // Execute any scripts within the loaded component
+                    const scripts = element.querySelectorAll('script');
+                    scripts.forEach(script => {
+                        const newScript = document.createElement('script');
+                        newScript.textContent = script.textContent;
+                        document.head.appendChild(newScript);
+                    });
+                    
+                    // Add any styles within the loaded component
+                    const styles = element.querySelectorAll('style');
+                    styles.forEach(style => {
+                        document.head.appendChild(style.cloneNode(true));
+                    });
+                }
+            } catch (error) {
+                console.error(`Error loading component ${componentPath}:`, error);
+            }
+        }
+
+        // Load all components when page loads
+        document.addEventListener('DOMContentLoaded', async function() {
+            await Promise.all([
+                loadComponent('contact-banner-placeholder', '/components/layout/contact-banner.html'),
+                loadComponent('header-navigation-placeholder', '/components/layout/header-navigation.html'),
+                loadComponent('large-format-hero-placeholder', '/components/hero/large-format-hero.html'),
+                loadComponent('large-format-explanation-placeholder', '/components/content/large-format-explanation.html'),
+                loadComponent('large-format-benefits-placeholder', '/components/content/large-format-benefits.html'),
+                loadComponent('large-format-specifications-placeholder', '/components/content/large-format-specifications.html'),
+                loadComponent('large-format-use-cases-placeholder', '/components/content/large-format-use-cases.html'),
+                loadComponent('large-format-cta-placeholder', '/components/content/large-format-cta.html'),
+                loadComponent('floating-cta-placeholder', '/components/utility/floating-cta.html'),
+                loadComponent('footer-placeholder', '/components/layout/footer.html')
+            ]);
+        });
+    </script>
+</body>
+</html>
