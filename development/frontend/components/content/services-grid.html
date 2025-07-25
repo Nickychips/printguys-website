@@ -12,51 +12,58 @@
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       
       <!-- DTF Heat Transfers -->
-      <div class="service-card bg-gray-900 rounded-xl p-8 border-2 border-red-600 hover:border-red-500 transition-all duration-300 hover:shadow-2xl hover:shadow-red-600/20">
-        <div class="text-center mb-6">
-          <div class="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
-            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4z"></path>
-            </svg>
-          </div>
-          <h3 class="text-2xl font-bold text-white mb-2">DTF Heat Transfers</h3>
-          <div class="text-3xl font-bold text-red-500 mb-2">$0.025<span class="text-lg text-gray-400">/sq inch</span></div>
-        </div>
+      <div class="service-card dtf-card bg-gray-900 rounded-xl p-8 border-2 border-red-600 hover:border-red-500 transition-all duration-300 hover:shadow-2xl hover:shadow-red-600/20 relative overflow-hidden">
+        <!-- Background Image with Overlay -->
+        <div class="dtf-background"></div>
+        <div class="dtf-overlay"></div>
         
-        <div class="space-y-3 mb-6">
-          <div class="flex items-center text-gray-300">
-            <svg class="w-5 h-5 text-red-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-            </svg>
-            <span>70-100 wash durability</span>
+        <!-- Content -->
+        <div class="relative z-10">
+          <div class="text-center mb-6">
+            <div class="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4z"></path>
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-2">DTF Heat Transfers</h3>
+            <div class="text-3xl font-bold text-red-500 mb-2">$0.025<span class="text-lg text-gray-300">/sq inch</span></div>
           </div>
-          <div class="flex items-center text-gray-300">
-            <svg class="w-5 h-5 text-red-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-            </svg>
-            <span>24-hour turnaround</span>
+          
+          <div class="space-y-3 mb-6">
+            <div class="flex items-center text-white">
+              <svg class="w-5 h-5 text-red-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              <span>70-100 wash durability</span>
+            </div>
+            <div class="flex items-center text-white">
+              <svg class="w-5 h-5 text-red-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              <span>24-hour turnaround</span>
+            </div>
+            <div class="flex items-center text-white">
+              <svg class="w-5 h-5 text-red-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              <span>No minimum orders</span>
+            </div>
+            <div class="flex items-center text-white">
+              <svg class="w-5 h-5 text-red-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              <span>Full color printing</span>
+            </div>
           </div>
-          <div class="flex items-center text-gray-300">
-            <svg class="w-5 h-5 text-red-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-            </svg>
-            <span>No minimum orders</span>
+          
+          <div class="space-y-3">
+            <a href="/quote" class="block w-full bg-red-600 text-white font-bold py-3 px-6 rounded-lg text-center hover:bg-red-700 transition-colors">
+              Get Quote
+            </a>
+            <a href="/dtf-transfers" class="block w-full bg-transparent border-2 border-red-600 text-red-400 font-bold py-3 px-6 rounded-lg text-center hover:bg-red-600 hover:text-white transition-colors">
+              Learn More
+            </a>
           </div>
-          <div class="flex items-center text-gray-300">
-            <svg class="w-5 h-5 text-red-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-            </svg>
-            <span>Full color printing</span>
-          </div>
-        </div>
-        
-        <div class="space-y-3">
-          <a href="/quote" class="block w-full bg-red-600 text-white font-bold py-3 px-6 rounded-lg text-center hover:bg-red-700 transition-colors">
-            Get Quote
-          </a>
-          <a href="/dtf-transfers" class="block w-full bg-transparent border-2 border-red-600 text-red-500 font-bold py-3 px-6 rounded-lg text-center hover:bg-red-600 hover:text-white transition-colors">
-            Learn More
-          </a>
         </div>
       </div>
 
@@ -228,6 +235,53 @@ document.addEventListener('DOMContentLoaded', function() {
   transform: translateY(-4px);
 }
 
+/* DTF Card with Background Image */
+.dtf-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.dtf-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('/assets/images/services/dtf-transfer-peel.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+.dtf-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(0,0,0,0.85) 0%, rgba(220,38,38,0.15) 40%, rgba(0,0,0,0.85) 100%);
+  z-index: 2;
+}
+
+.dtf-card .relative {
+  z-index: 10;
+}
+
+/* Enhanced text contrast for DTF card */
+.dtf-card .text-white {
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+}
+
+.dtf-card .text-gray-300 {
+  color: #f3f4f6 !important;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+}
+
+.dtf-card .text-red-400 {
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+}
+
 /* Ensure consistent card heights */
 .services-grid .service-card {
   display: flex;
@@ -249,5 +303,16 @@ document.addEventListener('DOMContentLoaded', function() {
   .service-card {
     padding: 1.5rem;
   }
+}
+
+/* Hover effect enhancement for DTF card */
+.dtf-card:hover .dtf-background {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+.dtf-card:hover .dtf-overlay {
+  background: linear-gradient(135deg, rgba(0,0,0,0.75) 0%, rgba(220,38,38,0.25) 40%, rgba(0,0,0,0.75) 100%);
+  transition: background 0.3s ease;
 }
 </style>
