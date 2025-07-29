@@ -1,0 +1,37 @@
+# Netlify redirects and image optimization
+# Performance optimizations for PrintGuys website
+
+# Image optimization redirects for better caching
+/images/* /images/:splat 200
+  Cache-Control: public, max-age=31536000, immutable
+
+# Font optimization
+/fonts/* /fonts/:splat 200
+  Cache-Control: public, max-age=31536000, immutable
+
+# CSS and JS caching
+/css/* /css/:splat 200
+  Cache-Control: public, max-age=604800
+  
+/js/* /js/:splat 200
+  Cache-Control: public, max-age=604800
+
+# Service worker for offline functionality
+/sw.js /sw.js 200
+  Cache-Control: public, max-age=0, must-revalidate
+
+# Image format optimization (serve WebP when supported)
+/images/*.jpg /images/*.webp 200
+  Accept: image/webp
+
+/images/*.png /images/*.webp 200
+  Accept: image/webp
+
+# Page redirects for clean URLs
+/dtf.html /dtf 301
+/about.html /about 301
+/contact.html /contact 301
+/blog.html /blog 301
+
+# SPA fallback for missing pages
+/* /index.html 200
