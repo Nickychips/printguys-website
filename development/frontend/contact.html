@@ -5,7 +5,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact PrintGuys - Get Instant Quote | Canada's Largest DTF Printer</title>
     <meta name="description" content="Contact PrintGuys for custom printing quotes. Call 647-685-6286 or email printguys.ca@gmail.com. Fast turnaround, transparent pricing, no minimums.">
+    <meta name="keywords" content="PrintGuys contact, DTF printing quote, custom printing quote Toronto, printing services Canada">
+    <link rel="canonical" href="https://printguys.ca/contact">
+    <meta property="og:title" content="Contact PrintGuys - Get Instant Quote for Custom Printing">
+    <meta property="og:description" content="Contact Canada's premier DTF printing service. Call 647-685-6286 for instant quotes. Fast turnaround, no minimums.">
+    <meta property="og:url" content="https://printguys.ca/contact">
+    <meta property="og:type" content="website">
     <link rel="icon" type="image/png" href="/assets/images/logo/printguys logotb.png">
+    
+    <!-- Google Analytics 4 - G-4YH4M54622 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4YH4M54622"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-4YH4M54622', {
+            page_title: document.title,
+            page_location: window.location.href,
+            send_page_view: true
+        });
+        
+        // Track phone number clicks as conversions
+        function trackPhoneClick() {
+            gtag('event', 'phone_click', {
+                event_category: 'contact',
+                event_label: '647-685-6286',
+                value: 1,
+                currency: 'CAD'
+            });
+        }
+        
+        // Track email clicks as conversions
+        function trackEmailClick() {
+            gtag('event', 'email_click', {
+                event_category: 'contact',
+                event_label: 'printguys.ca@gmail.com',
+                value: 1,
+                currency: 'CAD'
+            });
+        }
+        
+        // Track quote form submissions as high-value conversions
+        function trackQuoteSubmit() {
+            gtag('event', 'quote_form_submit', {
+                event_category: 'conversion',
+                event_label: 'contact_form',
+                value: 100,
+                currency: 'CAD'
+            });
+        }
+        
+        // Track quote button clicks
+        function trackQuoteClick() {
+            gtag('event', 'quote_request', {
+                event_category: 'conversion',
+                event_label: 'get_quote_button',
+                value: 50,
+                currency: 'CAD'
+            });
+        }
+    </script>
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         .hero-gradient {
@@ -20,6 +80,9 @@
         .contact-banner {
             background-color: #dc2626;
         }
+        .transition-colors{transition:background-color 0.2s ease,color 0.2s ease;}
+        .hover-lift{transition:transform 0.3s ease,box-shadow 0.3s ease;}
+        .hover-lift:hover{transform:translateY(-2px);box-shadow:0 8px 25px rgba(0,0,0,0.2);}
     </style>
 </head>
 <body class="bg-black text-white">
@@ -30,13 +93,9 @@
             <div class="flex flex-col sm:flex-row items-center justify-center text-center sm:text-left">
                 <div class="text-white font-semibold">
                     <span class="mr-4">Contact Nick:</span>
-                    <a href="tel:6476856286" class="hover:underline font-bold mr-4">
-                        647-685-6286
-                    </a>
+                    <a href="tel:6476856286" class="hover:underline font-bold mr-4" onclick="trackPhoneClick()">647-685-6286</a>
                     <span class="hidden sm:inline">|</span>
-                    <a href="mailto:printguys.ca@gmail.com" class="hover:underline font-bold sm:ml-4 block sm:inline mt-1 sm:mt-0">
-                        printguys.ca@gmail.com
-                    </a>
+                    <a href="mailto:printguys.ca@gmail.com" class="hover:underline font-bold sm:ml-4 block sm:inline mt-1 sm:mt-0" onclick="trackEmailClick()">printguys.ca@gmail.com</a>
                 </div>
             </div>
         </div>
@@ -45,11 +104,11 @@
     <!-- Header Navigation -->
     <header class="bg-black border-b border-red-600">
         <div class="container mx-auto px-4">
-            <nav class="flex items-center justify-between py-4">
+            <nav class="flex items-center justify-between py-4" role="navigation" aria-label="Main navigation">
                 <!-- Logo -->
                 <div class="flex items-center">
                     <a href="/">
-                        <img src="/assets/images/logo/printguys logotb.png" alt="PrintGuys Logo" class="h-8 md:h-10">
+                        <img src="/assets/images/logo/printguys logotb.png" alt="PrintGuys Logo - DTF Printing Canada" class="h-8 md:h-10" width="120" height="40" loading="eager">
                     </a>
                 </div>
                 
@@ -58,18 +117,16 @@
                     <a href="/" class="text-white hover:text-red-500 transition-colors">Home</a>
                     <a href="/about" class="text-white hover:text-red-500 transition-colors">About Us</a>
                     <a href="/blog" class="text-white hover:text-red-500 transition-colors">Blog</a>
-                    <a href="/contact" class="text-red-500 font-semibold">Contact</a>
+                    <a href="/contact" class="text-red-500 font-semibold" aria-current="page">Contact</a>
                 </div>
 
                 <!-- CTA Button -->
                 <div class="hidden md:block">
-                    <a href="#quote-form" class="bg-red-600 text-white px-6 py-2 rounded-lg font-bold hover:bg-red-700 transition-colors">
-                        Get Quote
-                    </a>
+                    <a href="#quote-form" class="bg-red-600 text-white px-6 py-2 rounded-lg font-bold hover:bg-red-700 transition-colors" onclick="trackQuoteClick()">Get Quote</a>
                 </div>
 
                 <!-- Mobile Menu Button -->
-                <button class="md:hidden text-white" id="mobile-menu-btn">
+                <button class="md:hidden text-white" id="mobile-menu-btn" aria-label="Toggle mobile menu">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
@@ -83,7 +140,7 @@
                     <a href="/about" class="block text-white hover:text-red-500">About Us</a>
                     <a href="/blog" class="block text-white hover:text-red-500">Blog</a>
                     <a href="/contact" class="block text-red-500 font-semibold">Contact</a>
-                    <a href="#quote-form" class="block bg-red-600 text-white px-4 py-2 rounded-lg font-bold text-center">Get Quote</a>
+                    <a href="#quote-form" class="block bg-red-600 text-white px-4 py-2 rounded-lg font-bold text-center" onclick="trackQuoteClick()">Get Quote</a>
                 </div>
             </div>
         </div>
@@ -98,22 +155,22 @@
                 </h1>
                 <p class="text-xl lg:text-2xl text-gray-300 max-w-3xl mx-auto mb-8">
                     Ready to get started? Call Nick at 
-                    <a href="tel:6476856286" class="text-red-500 font-bold hover:underline">647-685-6286</a>
+                    <a href="tel:6476856286" class="text-red-500 font-bold hover:underline" onclick="trackPhoneClick()">647-685-6286</a>
                     or email us at 
-                    <a href="mailto:printguys.ca@gmail.com" class="text-red-500 font-bold hover:underline">printguys.ca@gmail.com</a>
+                    <a href="mailto:printguys.ca@gmail.com" class="text-red-500 font-bold hover:underline" onclick="trackEmailClick()">printguys.ca@gmail.com</a>
                 </p>
                 
                 <!-- Quick Contact Stats -->
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="text-center">
+                    <div class="text-center hover-lift">
                         <div class="text-4xl font-bold text-red-500 mb-2">< 2hrs</div>
                         <div class="text-gray-400">Response Time</div>
                     </div>
-                    <div class="text-center">
+                    <div class="text-center hover-lift">
                         <div class="text-4xl font-bold text-red-500 mb-2">24/7</div>
                         <div class="text-gray-400">Quote Availability</div>
                     </div>
-                    <div class="text-center">
+                    <div class="text-center hover-lift">
                         <div class="text-4xl font-bold text-red-500 mb-2">Free</div>
                         <div class="text-gray-400">Quotes & Consultation</div>
                     </div>
@@ -127,7 +184,7 @@
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- Phone -->
-                <div class="bg-black rounded-xl p-8 border-2 border-red-600 text-center">
+                <div class="bg-black rounded-xl p-8 border-2 border-red-600 text-center hover-lift">
                     <div class="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-6">
                         <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
@@ -135,14 +192,12 @@
                     </div>
                     <h3 class="text-2xl font-bold text-white mb-4">Call Nick Directly</h3>
                     <p class="text-gray-400 mb-6">Get immediate assistance and pricing information</p>
-                    <a href="tel:6476856286" class="bg-red-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-red-700 transition-colors inline-block">
-                        647-685-6286
-                    </a>
+                    <a href="tel:6476856286" class="bg-red-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-red-700 transition-colors inline-block" onclick="trackPhoneClick()">647-685-6286</a>
                     <p class="text-sm text-gray-400 mt-4">Available 9 AM - 7 PM EST</p>
                 </div>
 
                 <!-- Email -->
-                <div class="bg-black rounded-xl p-8 border-2 border-red-600 text-center">
+                <div class="bg-black rounded-xl p-8 border-2 border-red-600 text-center hover-lift">
                     <div class="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-6">
                         <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
@@ -150,14 +205,12 @@
                     </div>
                     <h3 class="text-2xl font-bold text-white mb-4">Email Nick</h3>
                     <p class="text-gray-400 mb-6">Send design files and project details directly</p>
-                    <a href="mailto:printguys.ca@gmail.com" class="bg-red-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-red-700 transition-colors inline-block">
-                        printguys.ca@gmail.com
-                    </a>
+                    <a href="mailto:printguys.ca@gmail.com" class="bg-red-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-red-700 transition-colors inline-block" onclick="trackEmailClick()">printguys.ca@gmail.com</a>
                     <p class="text-sm text-gray-400 mt-4">Response within 2 hours</p>
                 </div>
 
                 <!-- Quote Form -->
-                <div class="bg-black rounded-xl p-8 border border-gray-700 text-center hover:border-red-600 transition-colors">
+                <div class="bg-black rounded-xl p-8 border border-gray-700 text-center hover:border-red-600 transition-colors hover-lift">
                     <div class="w-16 h-16 bg-gray-700 rounded-full flex items-center justify-center mx-auto mb-6">
                         <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
@@ -165,9 +218,7 @@
                     </div>
                     <h3 class="text-2xl font-bold text-white mb-4">Instant Quote</h3>
                     <p class="text-gray-400 mb-6">Fill out our form for detailed pricing</p>
-                    <a href="#quote-form" class="bg-gray-700 text-white px-6 py-3 rounded-lg font-bold hover:bg-gray-600 transition-colors inline-block">
-                        Get Quote
-                    </a>
+                    <a href="#quote-form" class="bg-gray-700 text-white px-6 py-3 rounded-lg font-bold hover:bg-gray-600 transition-colors inline-block" onclick="trackQuoteClick()">Get Quote</a>
                     <p class="text-sm text-gray-400 mt-4">Detailed pricing in minutes</p>
                 </div>
             </div>
@@ -184,7 +235,7 @@
                 </div>
 
                 <div class="bg-gray-900 rounded-2xl p-8">
-                    <div action="#" method="POST" class="space-y-6">
+                    <form action="mailto:printguys.ca@gmail.com" method="POST" enctype="text/plain" class="space-y-6" onsubmit="trackQuoteSubmit()">
                         <!-- Contact Info -->
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div>
@@ -214,11 +265,11 @@
                             <label for="service" class="block text-sm font-medium text-gray-300 mb-2">Service Needed *</label>
                             <select id="service" name="service" required class="w-full px-4 py-3 bg-black border border-gray-600 rounded-lg text-white focus:border-red-500 focus:outline-none">
                                 <option value="">Select a service...</option>
-                                <option value="dtf">DTF Heat Transfers ($0.025/sq inch)</option>
-                                <option value="screen">Screen Printing ($2.50/piece)</option>
-                                <option value="embroidery">Custom Embroidery ($8.00/piece)</option>
-                                <option value="sublimation">Sublimation Printing</option>
-                                <option value="uv-dtf">UV DTF Stickers</option>
+                                <option value="dtf">DTF Heat Transfers ($0.038/sq inch)</option>
+                                <option value="screen">Screen Printing (Custom Quote)</option>
+                                <option value="embroidery">Custom Embroidery ($0.05/stitch)</option>
+                                <option value="sublimation">Sublimation Printing ($1.25/piece)</option>
+                                <option value="uv-dtf">UV DTF Stickers (Custom Quote)</option>
                                 <option value="other">Other - Please specify</option>
                             </select>
                         </div>
@@ -231,7 +282,7 @@
                             </div>
                             <div>
                                 <label for="size" class="block text-sm font-medium text-gray-300 mb-2">Size/Dimensions</label>
-                                <input type="text" id="size" name="size" placeholder="e.g. 8&quot; x 10&quot;" class="w-full px-4 py-3 bg-black border border-gray-600 rounded-lg text-white focus:border-red-500 focus:outline-none">
+                                <input type="text" id="size" name="size" placeholder='e.g. 8" x 10"' class="w-full px-4 py-3 bg-black border border-gray-600 rounded-lg text-white focus:border-red-500 focus:outline-none">
                             </div>
                         </div>
 
@@ -243,7 +294,7 @@
 
                         <!-- Submit Button -->
                         <div class="text-center">
-                            <button type="submit" class="bg-red-600 text-white px-12 py-4 rounded-lg font-bold text-lg hover:bg-red-700 transition-colors inline-flex items-center">
+                            <button type="submit" class="bg-red-600 text-white px-12 py-4 rounded-lg font-bold text-lg hover:bg-red-700 transition-colors inline-flex items-center hover-lift">
                                 <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
                                 </svg>
@@ -251,7 +302,7 @@
                             </button>
                             <p class="text-sm text-gray-400 mt-4">You'll receive a detailed quote within 2 hours at <span class="text-white">printguys.ca@gmail.com</span></p>
                         </div>
-                    </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -263,32 +314,36 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-center md:text-left">
                 <!-- Company Info -->
                 <div>
-                    <img src="/assets/images/logo/printguys logotb.png" alt="PrintGuys Logo" class="h-12 mx-auto md:mx-0 mb-4">
-                    <p class="text-gray-400 mb-4">Canada's largest DTF printer providing professional custom printing services with fast turnaround and transparent pricing.</p>
+                    <img src="/assets/images/logo/printguys logotb.png" alt="PrintGuys Logo - DTF Printing Canada" class="h-12 mx-auto md:mx-0 mb-4" width="120" height="48" loading="lazy">
+                    <p class="text-gray-400 mb-4">Canada's premier DTF printing and custom apparel production partner serving businesses across Canada with professional quality and transparent pricing.</p>
+                    <div class="text-sm text-gray-500">
+                        <p>Serving: Toronto, GTA, Ontario, and all of Canada</p>
+                        <p>Specializing in: DTF Heat Transfers, Screen Printing, Embroidery, Sublimation</p>
+                    </div>
                 </div>
 
                 <!-- Contact Info -->
                 <div>
-                    <h4 class="text-lg font-bold text-white mb-4">Contact Nick</h4>
+                    <h4 class="text-lg font-bold text-white mb-4">Contact PrintGuys</h4>
                     <div class="space-y-2 text-gray-400">
                         <div class="flex items-center justify-center md:justify-start">
                             <svg class="w-5 h-5 mr-2 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
                             </svg>
-                            <a href="tel:6476856286" class="text-white hover:text-red-500 font-bold">647-685-6286</a>
+                            <a href="tel:6476856286" class="text-white hover:text-red-500 font-bold" onclick="trackPhoneClick()">647-685-6286</a>
                         </div>
                         <div class="flex items-center justify-center md:justify-start">
                             <svg class="w-5 h-5 mr-2 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
                             </svg>
-                            <a href="mailto:printguys.ca@gmail.com" class="text-white hover:text-red-500 font-bold">printguys.ca@gmail.com</a>
+                            <a href="mailto:printguys.ca@gmail.com" class="text-white hover:text-red-500 font-bold" onclick="trackEmailClick()">printguys.ca@gmail.com</a>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="border-t border-gray-700 mt-8 pt-8 text-center">
-                <p class="text-gray-400">&copy; 2025 PrintGuys. All rights reserved.</p>
+                <p class="text-gray-400">&copy; 2025 PrintGuys - DTF Printing Canada. All rights reserved.</p>
             </div>
         </div>
     </footer>
