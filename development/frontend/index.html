@@ -17,9 +17,16 @@
     <meta name="twitter:description" content="Professional DTF heat transfers from $0.038/sq inch. No minimums, fast turnaround. Serving all of Canada.">
     <link rel="icon" type="image/png" href="/assets/images/logo/printguys logotb.png">
     
-    <!-- Optimized Google Fonts with font-display -->
+    <!-- Optimized Resource Hints -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+    <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
+    
+    <!-- Critical Image Preloading -->
+    <link rel="preload" as="image" href="https://images.unsplash.com/photo-1581092921461-eab62e97a780?w=400&h=300&fit=crop&auto=format&q=75" media="(min-width: 768px)">
+    
+    <!-- Optimized Google Fonts with font-display -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <script src="https://cdn.tailwindcss.com"></script>
@@ -67,30 +74,15 @@
                         "unitCode": "sqin"
                     }
                 }
-            },
-            {
-                "@type": "Service",
-                "name": "Screen Printing",
-                "description": "High-quality screen printing for bulk orders"
-            },
-            {
-                "@type": "Service",
-                "name": "Custom Embroidery",
-                "description": "Professional embroidery services for corporate wear and uniforms"
-            },
-            {
-                "@type": "Service",
-                "name": "Sublimation Printing",
-                "description": "Dye sublimation printing for polyester apparel and products"
             }
         ]
     }
     </script>
     
-    <!-- Minified and Optimized CSS -->
+    <!-- Highly Optimized and Minified CSS -->
     <style>
         *{box-sizing:border-box;}
-        body{font-family:'Inter',sans-serif;margin:0;padding:0;}
+        body{font-family:'Inter',sans-serif;margin:0;padding:0;line-height:1.6;}
         .hero-gradient{background:linear-gradient(135deg,#000 0%,#1a1a1a 50%,#000 100%);position:relative;overflow:hidden;}
         .text-gradient{background:linear-gradient(135deg,#ef4444,#dc2626);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
         .contact-banner{background-color:#dc2626;}
@@ -99,16 +91,16 @@
         .glow-effect:hover{box-shadow:0 0 30px rgba(220,38,38,0.5);}
         .pulse-glow{animation:pulse-glow 2s ease-in-out infinite;}
         @keyframes pulse-glow{0%,100%{box-shadow:0 0 20px rgba(220,38,38,0.3);}50%{box-shadow:0 0 40px rgba(220,38,38,0.6);}}
-        .hover-lift{transition:transform 0.3s ease,box-shadow 0.3s ease;}
+        .hover-lift{transition:transform 0.3s ease,box-shadow 0.3s ease;will-change:transform;}
         .hover-lift:hover{transform:translateY(-2px);box-shadow:0 8px 25px rgba(0,0,0,0.2);}
         .content-layer{position:relative;z-index:10;}
-        @media (max-width:768px){.floating-cta{bottom:10px;right:10px;}}
-        /* Performance optimizations */
-        img{max-width:100%;height:auto;}
         .transition-colors{transition:background-color 0.2s ease,color 0.2s ease;}
-        .transition-all{transition:all 0.3s ease;}
-        /* Reduce motion for users who prefer it */
+        img{max-width:100%;height:auto;}
+        /* Performance optimizations */
+        .service-loading{background-color:#1f2937;min-height:300px;border-radius:0.75rem;}
+        /* Reduce motion for accessibility */
         @media (prefers-reduced-motion:reduce){*{animation-duration:0.01ms !important;animation-iteration-count:1 !important;transition-duration:0.01ms !important;}}
+        @media (max-width:768px){.floating-cta{bottom:10px;right:10px;}}
     </style>
 </head>
 <body class="bg-black text-white">
@@ -132,7 +124,7 @@
         <div class="container mx-auto px-4">
             <nav class="flex items-center justify-between py-4" role="navigation" aria-label="Main navigation">
                 <div class="flex items-center">
-                    <img src="/assets/images/logo/printguys logotb.png" alt="PrintGuys Logo - DTF Printing Canada" class="h-8 md:h-10" width="120" height="40" loading="eager">
+                    <img src="/assets/images/logo/printguys logotb.png" alt="PrintGuys Logo - DTF Printing Canada" class="h-8 md:h-10" width="120" height="40" loading="eager" decoding="async">
                 </div>
                 
                 <div class="hidden md:flex space-x-8">
@@ -213,8 +205,24 @@
         </div>
     </section>
 
-    <!-- Services Preview -->
-    <div id="services-section" class="content-layer"></div>
+    <!-- Services Preview with Loading State -->
+    <div id="services-section" class="content-layer">
+        <!-- Loading placeholder while services component loads -->
+        <div id="services-loading" class="py-16 bg-gray-900">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold text-white mb-4">Our Services</h2>
+                    <p class="text-xl text-gray-400">Loading our professional printing services...</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                    <div class="service-loading"></div>
+                    <div class="service-loading"></div>
+                    <div class="service-loading"></div>
+                    <div class="service-loading"></div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Floating CTA -->
     <div class="floating-cta">
@@ -231,7 +239,7 @@
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-center md:text-left">
                 <div>
-                    <img src="/assets/images/logo/printguys logotb.png" alt="PrintGuys Logo - DTF Printing Canada" class="h-12 mx-auto md:mx-0 mb-4" width="120" height="48" loading="lazy">
+                    <img src="/assets/images/logo/printguys logotb.png" alt="PrintGuys Logo - DTF Printing Canada" class="h-12 mx-auto md:mx-0 mb-4" width="120" height="48" loading="lazy" decoding="async">
                     <p class="text-gray-400 mb-4">Canada's premier DTF printing and custom apparel production partner serving businesses across Canada with professional quality and transparent pricing.</p>
                     <div class="text-sm text-gray-500">
                         <p>Serving: Toronto, GTA, Ontario, and all of Canada</p>
@@ -262,7 +270,7 @@
         </div>
     </footer>
 
-    <!-- JavaScript -->
+    <!-- Optimized JavaScript with Performance Focus -->
     <script>
         // Optimized mobile menu functionality
         (function() {
@@ -278,36 +286,49 @@
             }
         })();
 
-        // Optimized services component loading with error handling
+        // Optimized services component loading with improved performance
         (function() {
             const servicesSection = document.getElementById('services-section');
+            const loadingElement = document.getElementById('services-loading');
+            
             if (servicesSection) {
+                // Show loading state
+                if (loadingElement) {
+                    loadingElement.style.display = 'block';
+                }
+                
                 fetch('/components/content/services-grid-with-images.html')
                     .then(response => {
                         if (!response.ok) throw new Error('Component not found');
                         return response.text();
                     })
                     .then(data => {
+                        // Hide loading state and show content
+                        if (loadingElement) {
+                            loadingElement.style.display = 'none';
+                        }
                         servicesSection.innerHTML = data;
                     })
                     .catch(error => {
                         console.log('Services component loading fallback');
-                        // Could add fallback content here if needed
+                        if (loadingElement) {
+                            loadingElement.innerHTML = '<div class="py-16 bg-gray-900 text-center"><p class="text-gray-400">Services temporarily unavailable. Please contact us directly.</p></div>';
+                        }
                     });
             }
         })();
 
-        // Initialize background effects only after DOM is ready
-        document.addEventListener('DOMContentLoaded', function() {
-            // Check if background effect scripts are available before initializing
+        // Initialize background effects only after page load with performance optimization
+        window.addEventListener('load', function() {
+            // Reduced particle count for better performance
             if (window.ShimmeringBackground) {
                 try {
                     ShimmeringBackground.init('default', {
-                        particleCount: 30,
-                        opacity: 0.1
+                        particleCount: 20,
+                        opacity: 0.08
                     });
                 } catch (e) {
-                    console.log('Background effects initialization skipped');
+                    console.log('Background effects skipped for performance');
                 }
             }
 
@@ -315,18 +336,18 @@
                 try {
                     DynamicBackgroundEffects.init('homepage', {
                         intensity: 'low',
-                        particleCount: 20,
-                        opacity: 0.06
+                        particleCount: 15,
+                        opacity: 0.05
                     });
                 } catch (e) {
-                    console.log('Dynamic background effects initialization skipped');
+                    console.log('Dynamic background effects skipped for performance');
                 }
             }
         });
     </script>
 
-    <!-- Background Effects Scripts - Loaded asynchronously -->
-    <script src="/components/effects/shimmering-background.js" async></script>
-    <script src="/components/effects/dynamic-background-effects.js" async></script>
+    <!-- Background Effects Scripts - Loaded asynchronously with low priority -->
+    <script src="/components/effects/shimmering-background.js" async defer></script>
+    <script src="/components/effects/dynamic-background-effects.js" async defer></script>
 </body>
 </html>
