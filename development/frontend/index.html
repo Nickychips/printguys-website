@@ -17,44 +17,58 @@
     <meta name="twitter:description" content="Professional DTF heat transfers from $0.038/sq inch. No minimums, fast turnaround. Serving all of Canada.">
     <link rel="icon" type="image/png" href="/assets/images/logo/printguys logotb.png">
     
-    <!-- Google Analytics 4 - Replace YOUR_GA4_MEASUREMENT_ID with actual ID -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_GA4_MEASUREMENT_ID"></script>
+    <!-- Google Analytics 4 - G-4YH4M54622 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4YH4M54622"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'YOUR_GA4_MEASUREMENT_ID', {
+        gtag('config', 'G-4YH4M54622', {
             // Enhanced measurement for better tracking
             page_title: document.title,
             page_location: window.location.href,
-            // Track phone clicks as conversions
+            // Enhanced ecommerce and conversion tracking
+            send_page_view: true,
             custom_map: {'custom_parameter_1': 'phone_click'}
         });
         
-        // Track phone number clicks
+        // Track phone number clicks as conversions
         function trackPhoneClick() {
             gtag('event', 'phone_click', {
                 event_category: 'contact',
                 event_label: '647-685-6286',
-                value: 1
+                value: 1,
+                currency: 'CAD'
             });
         }
         
-        // Track email clicks
+        // Track email clicks as conversions
         function trackEmailClick() {
             gtag('event', 'email_click', {
                 event_category: 'contact',
                 event_label: 'printguys.ca@gmail.com',
-                value: 1
+                value: 1,
+                currency: 'CAD'
             });
         }
         
-        // Track quote button clicks
+        // Track quote button clicks as high-value conversions
         function trackQuoteClick() {
             gtag('event', 'quote_request', {
                 event_category: 'conversion',
                 event_label: 'get_quote_button',
-                value: 1
+                value: 50,
+                currency: 'CAD'
+            });
+        }
+        
+        // Track service interest
+        function trackServiceClick(serviceName) {
+            gtag('event', 'service_interest', {
+                event_category: 'engagement',
+                event_label: serviceName,
+                value: 10,
+                currency: 'CAD'
             });
         }
     </script>
