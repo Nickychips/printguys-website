@@ -5,21 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About PrintGuys - Canada's Largest DTF Printer | Our Story & Mission</title>
     <meta name="description" content="Learn about PrintGuys, Canada's largest DTF printer. Our mission is to provide fast, affordable, professional custom printing with transparent pricing and no minimums.">
+    <meta name="keywords" content="PrintGuys about, DTF printing Canada, custom printing company, professional printing services Toronto">
+    <link rel="canonical" href="https://printguys.ca/about">
+    <meta property="og:title" content="About PrintGuys - Canada's Premier DTF Printing Company">
+    <meta property="og:description" content="Learn about PrintGuys mission to provide fast, professional DTF printing and custom apparel services across Canada with transparent pricing.">
+    <meta property="og:url" content="https://printguys.ca/about">
+    <meta property="og:type" content="website">
     <link rel="icon" type="image/png" href="/assets/images/logo/printguys logotb.png">
+    
+    <!-- Optimized Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
     <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Minified CSS -->
     <style>
-        .hero-gradient {
-            background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #000000 100%);
-        }
-        .text-gradient {
-            background: linear-gradient(135deg, #ef4444, #dc2626);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        .contact-banner {
-            background-color: #dc2626;
-        }
+        *{box-sizing:border-box;}
+        body{font-family:'Inter',sans-serif;margin:0;padding:0;}
+        .hero-gradient{background:linear-gradient(135deg,#000 0%,#1a1a1a 50%,#000 100%);}
+        .text-gradient{background:linear-gradient(135deg,#ef4444,#dc2626);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+        .contact-banner{background-color:#dc2626;}
+        .transition-colors{transition:background-color 0.2s ease,color 0.2s ease;}
+        img{max-width:100%;height:auto;}
+        @media (prefers-reduced-motion:reduce){*{animation-duration:0.01ms !important;transition-duration:0.01ms !important;}}
     </style>
 </head>
 <body class="bg-black text-white">
@@ -30,13 +40,9 @@
             <div class="flex flex-col sm:flex-row items-center justify-center text-center sm:text-left">
                 <div class="text-white font-semibold">
                     <span class="mr-4">Contact Nick:</span>
-                    <a href="tel:6476856286" class="hover:underline font-bold mr-4">
-                        647-685-6286
-                    </a>
+                    <a href="tel:6476856286" class="hover:underline font-bold mr-4" aria-label="Call PrintGuys">647-685-6286</a>
                     <span class="hidden sm:inline">|</span>
-                    <a href="mailto:printguys.ca@gmail.com" class="hover:underline font-bold sm:ml-4 block sm:inline mt-1 sm:mt-0">
-                        printguys.ca@gmail.com
-                    </a>
+                    <a href="mailto:printguys.ca@gmail.com" class="hover:underline font-bold sm:ml-4 block sm:inline mt-1 sm:mt-0" aria-label="Email PrintGuys">printguys.ca@gmail.com</a>
                 </div>
             </div>
         </div>
@@ -45,45 +51,43 @@
     <!-- Header Navigation -->
     <header class="bg-black border-b border-red-600">
         <div class="container mx-auto px-4">
-            <nav class="flex items-center justify-between py-4">
+            <nav class="flex items-center justify-between py-4" role="navigation" aria-label="Main navigation">
                 <!-- Logo -->
                 <div class="flex items-center">
                     <a href="/">
-                        <img src="/assets/images/logo/printguys logotb.png" alt="PrintGuys Logo" class="h-8 md:h-10">
+                        <img src="/assets/images/logo/printguys logotb.png" alt="PrintGuys Logo - DTF Printing Canada" class="h-8 md:h-10" width="120" height="40" loading="eager">
                     </a>
                 </div>
                 
                 <!-- Desktop Navigation -->
                 <div class="hidden md:flex space-x-8">
                     <a href="/" class="text-white hover:text-red-500 transition-colors">Home</a>
-                    <a href="/about" class="text-red-500 font-semibold">About Us</a>
+                    <a href="/about" class="text-red-500 font-semibold" aria-current="page">About Us</a>
                     <a href="/blog" class="text-white hover:text-red-500 transition-colors">Blog</a>
                     <a href="/contact" class="text-white hover:text-red-500 transition-colors">Contact</a>
                 </div>
 
                 <!-- CTA Button -->
                 <div class="hidden md:block">
-                    <a href="/contact" class="bg-red-600 text-white px-6 py-2 rounded-lg font-bold hover:bg-red-700 transition-colors">
-                        Get Quote
-                    </a>
+                    <a href="/contact" class="bg-red-600 text-white px-6 py-2 rounded-lg font-bold hover:bg-red-700 transition-colors" aria-label="Get a quote for printing services">Get Quote</a>
                 </div>
 
                 <!-- Mobile Menu Button -->
-                <button class="md:hidden text-white" id="mobile-menu-btn">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <button class="md:hidden text-white" id="mobile-menu-btn" aria-label="Toggle mobile menu" aria-expanded="false">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
                 </button>
             </nav>
 
             <!-- Mobile Menu -->
-            <div class="md:hidden hidden" id="mobile-menu">
+            <div class="md:hidden hidden" id="mobile-menu" role="menu">
                 <div class="py-4 space-y-4 border-t border-red-600">
-                    <a href="/" class="block text-white hover:text-red-500">Home</a>
-                    <a href="/about" class="block text-red-500 font-semibold">About Us</a>
-                    <a href="/blog" class="block text-white hover:text-red-500">Blog</a>
-                    <a href="/contact" class="block text-white hover:text-red-500">Contact</a>
-                    <a href="/contact" class="block bg-red-600 text-white px-4 py-2 rounded-lg font-bold text-center">Get Quote</a>
+                    <a href="/" class="block text-white hover:text-red-500" role="menuitem">Home</a>
+                    <a href="/about" class="block text-red-500 font-semibold" role="menuitem">About Us</a>
+                    <a href="/blog" class="block text-white hover:text-red-500" role="menuitem">Blog</a>
+                    <a href="/contact" class="block text-white hover:text-red-500" role="menuitem">Contact</a>
+                    <a href="/contact" class="block bg-red-600 text-white px-4 py-2 rounded-lg font-bold text-center" role="menuitem">Get Quote</a>
                 </div>
             </div>
         </div>
@@ -97,7 +101,7 @@
                     About <span class="text-gradient">PrintGuys</span>
                 </h1>
                 <p class="text-xl lg:text-2xl text-gray-300 max-w-3xl mx-auto">
-                    Your creative production partner specializing in premium custom printing solutions. From concept to completion, we bring your vision to life with precision and passion.
+                    Canada's premier DTF printing and custom apparel production company. From concept to completion, we bring your vision to life with precision and passion.
                 </p>
             </div>
         </div>
@@ -110,32 +114,33 @@
                 <div>
                     <div class="prose prose-lg text-gray-300">
                         <p class="text-lg mb-6 leading-relaxed">
-                            At Printguys, we're more than just a print shop — we're your creative production partner. Specializing in a full spectrum of apparel and product customization services, we bring ideas to life with precision, passion, and professional care. Whether it's screen printing, direct-to-film transfers (DTF), dye sublimation, embroidery, vinyl, or large format printing, our mission is to deliver high-quality results that elevate your brand, event, or project.
+                            At <strong class="text-red-500">PrintGuys</strong>, we're more than just a print shop — we're Canada's premier DTF printing specialist and your complete creative production partner. Specializing in direct-to-film transfers (DTF), screen printing, embroidery, sublimation, and large format printing, we bring ideas to life with precision, passion, and professional care.
                         </p>
                         <p class="text-lg mb-6 leading-relaxed">
-                            We serve businesses, artists, entrepreneurs, and everyday creators who need reliable, fast, and detail-oriented print solutions.
+                            <strong>Our mission</strong> is simple: deliver high-quality custom printing with <strong class="text-red-500">transparent pricing</strong>, <strong class="text-red-500">no minimum orders</strong>, and <strong class="text-red-500">lightning-fast turnaround</strong>. We serve businesses, artists, entrepreneurs, and creators across Canada who need reliable, fast, and detail-oriented print solutions.
                         </p>
                         <p class="text-lg mb-6 leading-relaxed">
-                            What sets Printguys apart is our commitment to consistency, creativity, and collaboration. We treat every order — big or small — with the same level of importance and attention to detail. Our team works closely with each client to ensure their vision is realized exactly as imagined, offering design support, product advice, and hands-on service throughout the process.
+                            What sets PrintGuys apart is our commitment to consistency, creativity, and collaboration. We treat every order — from 1 piece to 10,000 — with the same level of importance and attention to detail. Our team works closely with each client to ensure their vision is realized exactly as imagined.
                         </p>
                         <p class="text-lg leading-relaxed">
-                            Whether you're printing 10 shirts or 10,000, we're here to help you make a lasting impression — because at Printguys, <span class="text-red-500 font-semibold">your vision is our job</span>.
+                            Whether you need DTF heat transfers, custom embroidery, or screen printing, we're here to help you make a lasting impression — because at PrintGuys, <span class="text-red-500 font-semibold">your vision is our job</span>.
                         </p>
                     </div>
                 </div>
                 <div class="bg-red-600 rounded-2xl p-8 text-center">
+                    <h2 class="text-2xl font-bold text-white mb-6">PrintGuys by the Numbers</h2>
                     <div class="grid grid-cols-2 gap-6">
                         <div>
-                            <div class="text-4xl font-bold text-white mb-2">500+</div>
+                            <div class="text-4xl font-bold text-white mb-2">1,200+</div>
                             <div class="text-red-100">Happy Customers</div>
                         </div>
                         <div>
-                            <div class="text-4xl font-bold text-white mb-2">2,500+</div>
+                            <div class="text-4xl font-bold text-white mb-2">5,000+</div>
                             <div class="text-red-100">Orders Completed</div>
                         </div>
                         <div>
                             <div class="text-4xl font-bold text-white mb-2">2-5 Days</div>
-                            <div class="text-red-100">Turnaround Time</div>
+                            <div class="text-red-100">Fast Turnaround</div>
                         </div>
                         <div>
                             <div class="text-4xl font-bold text-white mb-2">98%</div>
@@ -147,27 +152,83 @@
         </div>
     </section>
 
+    <!-- Our Services Preview -->
+    <section class="py-16 bg-black">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-white mb-4">What We Do Best</h2>
+                <p class="text-xl text-gray-400">Complete custom printing solutions for all your needs</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- DTF Printing -->
+                <div class="bg-gray-800 rounded-xl p-6 text-center hover:bg-gray-700 transition-colors">
+                    <div class="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">DTF Heat Transfers</h3>
+                    <p class="text-gray-400 mb-4">Our specialty - any fabric, complex designs, vibrant colors</p>
+                    <div class="text-red-500 font-bold">From $0.038/sq inch</div>
+                </div>
+
+                <!-- Screen Printing -->
+                <div class="bg-gray-800 rounded-xl p-6 text-center hover:bg-gray-700 transition-colors">
+                    <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Screen Printing</h3>
+                    <p class="text-gray-400 mb-4">Bulk orders, bold graphics, unmatched durability</p>
+                    <div class="text-red-500 font-bold">Custom Quotes</div>
+                </div>
+
+                <!-- Embroidery -->
+                <div class="bg-gray-800 rounded-xl p-6 text-center hover:bg-gray-700 transition-colors">
+                    <div class="w-16 h-16 bg-yellow-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Custom Embroidery</h3>
+                    <p class="text-gray-400 mb-4">Corporate wear, uniforms, professional finish</p>
+                    <div class="text-red-500 font-bold">From $0.05/stitch</div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="/" class="bg-red-600 text-white px-8 py-3 rounded-lg font-bold hover:bg-red-700 transition-colors">View All Services</a>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="bg-gray-900 border-t border-red-600 py-12">
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-center md:text-left">
                 <!-- Company Info -->
                 <div>
-                    <img src="/assets/images/logo/printguys logotb.png" alt="PrintGuys Logo" class="h-12 mx-auto md:mx-0 mb-4">
-                    <p class="text-gray-400 mb-4">Professional quality custom printing with exceptional attention to detail and personalized service for every project.</p>
+                    <img src="/assets/images/logo/printguys logotb.png" alt="PrintGuys Logo - DTF Printing Canada" class="h-12 mx-auto md:mx-0 mb-4" width="120" height="48" loading="lazy">
+                    <p class="text-gray-400 mb-4">Canada's premier DTF printing and custom apparel production partner serving businesses across Canada with professional quality and transparent pricing.</p>
+                    <div class="text-sm text-gray-500">
+                        <p>Serving: Toronto, GTA, Ontario, and all of Canada</p>
+                        <p>Specializing in: DTF Heat Transfers, Screen Printing, Embroidery, Sublimation</p>
+                    </div>
                 </div>
                 <!-- Contact Info -->
                 <div>
-                    <h4 class="text-lg font-bold text-white mb-4">Contact Nick</h4>
+                    <h4 class="text-lg font-bold text-white mb-4">Contact PrintGuys</h4>
                     <div class="space-y-2 text-gray-400">
                         <div class="flex items-center justify-center md:justify-start">
-                            <svg class="w-5 h-5 mr-2 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="w-5 h-5 mr-2 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
                             </svg>
                             <a href="tel:6476856286" class="text-white hover:text-red-500 font-bold">647-685-6286</a>
                         </div>
                         <div class="flex items-center justify-center md:justify-start">
-                            <svg class="w-5 h-5 mr-2 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="w-5 h-5 mr-2 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
                             </svg>
                             <a href="mailto:printguys.ca@gmail.com" class="text-white hover:text-red-500 font-bold">printguys.ca@gmail.com</a>
@@ -177,18 +238,26 @@
             </div>
 
             <div class="border-t border-gray-700 mt-8 pt-8 text-center">
-                <p class="text-gray-400">&copy; 2025 PrintGuys. All rights reserved.</p>
+                <p class="text-gray-400">&copy; 2025 PrintGuys - DTF Printing Canada. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <!-- JavaScript -->
+    <!-- Optimized JavaScript -->
     <script>
-        // Mobile menu toggle
-        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+        // Mobile menu toggle with accessibility
+        (function() {
+            const menuBtn = document.getElementById('mobile-menu-btn');
             const menu = document.getElementById('mobile-menu');
-            menu.classList.toggle('hidden');
-        });
+            
+            if (menuBtn && menu) {
+                menuBtn.addEventListener('click', function() {
+                    const isHidden = menu.classList.contains('hidden');
+                    menu.classList.toggle('hidden');
+                    menuBtn.setAttribute('aria-expanded', !isHidden);
+                });
+            }
+        })();
     </script>
 </body>
 </html>
