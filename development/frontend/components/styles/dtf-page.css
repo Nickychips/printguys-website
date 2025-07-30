@@ -1,0 +1,12 @@
+/* DTF Page Styles */
+body{font-family:'Inter',sans-serif;}
+.hero-gradient{background:linear-gradient(135deg,#000 0%,#1a1a1a 50%,#000 100%);}
+.text-gradient{background:linear-gradient(135deg,#ef4444,#dc2626);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.pricing-card{background:linear-gradient(135deg,#1f2937 0%,#111827 100%);border:1px solid #374151;}
+.pricing-card:hover{border-color:#dc2626;box-shadow:0 10px 25px rgba(220,38,38,0.2);}
+.contact-banner{background-color:#dc2626;}
+.glow-effect{box-shadow:0 0 20px rgba(220,38,38,0.3);transition:box-shadow 0.3s ease;}
+.glow-effect:hover{box-shadow:0 0 30px rgba(220,38,38,0.5);}
+.hover-lift{transition:transform 0.3s ease;}
+.hover-lift:hover{transform:translateY(-2px);}
+.floating-cta{position:fixed;bottom:20px;right:20px;z-index:1000;}
