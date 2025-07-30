@@ -1,113 +1,65 @@
-    <!-- DTF Pricing Breakdown Section -->
-    <section class="py-16 bg-black relative z-10">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-4xl font-bold text-white mb-4">DTF Pricing Breakdown</h2>
-                <p class="text-xl text-gray-400">Transparent pricing with no hidden fees</p>
-            </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DTF Heat Transfers Canada - $0.038/sq inch | PrintGuys</title>
+    <meta name="description" content="Professional DTF heat transfers from $0.038/sq inch. No minimums, fast 2-5 day turnaround.">
+    <link rel="canonical" href="https://printguys.ca/dtf">
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4YH4M54622"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-4YH4M54622');
+        
+        function trackDTFQuote() {
+            gtag('event', 'dtf_quote_request', {
+                event_category: 'conversion',
+                value: 75,
+                currency: 'CAD'
+            });
+        }
+        
+        function trackPhoneClick() { gtag('event', 'phone_click', { event_category: 'contact' }); }
+        function trackEmailClick() { gtag('event', 'email_click', { event_category: 'contact' }); }
+    </script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/components/styles/dtf-page.css">
+</head>
+<body class="bg-black text-white">
+    <div id="contact-banner"></div>
+    <div id="header-nav"></div>
+    <div id="dtf-hero"></div>
+    <div id="dtf-pricing"></div>
+    <div id="dtf-cta"></div>
+    <div id="floating-cta"></div>
+    <div id="footer"></div>
 
-            <div class="max-w-6xl mx-auto">
-                <!-- Main Pricing -->
-                <div class="bg-gray-900 rounded-2xl p-8 border-2 border-red-600 mb-12">
-                    <div class="text-center mb-8">
-                        <div class="text-6xl font-bold text-red-500 mb-2">$0.038</div>
-                        <div class="text-2xl text-white mb-2">Per Square Inch</div>
-                        <div class="text-lg text-gray-300">
-                            <strong class="text-red-500">Square Foot:</strong> $5.47 (144 sq in)
-                        </div>
-                    </div>
+    <script>
+        // Load components
+        async function loadComponent(elementId, componentPath) {
+            try {
+                const response = await fetch(componentPath);
+                const html = await response.text();
+                document.getElementById(elementId).innerHTML = html;
+            } catch (error) {
+                console.log(`Failed to load ${componentPath}`);
+            }
+        }
 
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <div>
-                            <h4 class="text-xl font-bold text-white mb-4">What's Included:</h4>
-                            <ul class="space-y-2 text-gray-300">
-                                <li>✓ Full-color CMYK printing</li>
-                                <li>✓ White ink when needed</li>
-                                <li>✓ Premium DTF film</li>
-                                <li>✓ Quality control check</li>
-                                <li>✓ No minimum orders</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h4 class="text-xl font-bold text-white mb-4">Why Per Square Inch?</h4>
-                            <ul class="space-y-2 text-gray-300 text-sm">
-                                <li>• Industry standard pricing</li>
-                                <li>• Fair - pay for what you use</li>
-                                <li>• Easy calculation for any size</li>
-                                <li>• No hidden fees or setup charges</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Pricing Chart -->
-                <div class="bg-gray-900 rounded-2xl p-8 border border-gray-700">
-                    <h3 class="text-2xl font-bold text-white mb-6 text-center">Common Sizes & Pricing</h3>
-                    
-                    <div class="overflow-x-auto">
-                        <table class="w-full text-left">
-                            <thead>
-                                <tr class="border-b border-gray-700">
-                                    <th class="py-3 px-4 text-white font-bold">Size</th>
-                                    <th class="py-3 px-4 text-white font-bold">Price</th>
-                                    <th class="py-3 px-4 text-white font-bold">Use Case</th>
-                                </tr>
-                            </thead>
-                            <tbody class="text-gray-300">
-                                <tr class="border-b border-gray-700 hover:bg-gray-800">
-                                    <td class="py-3 px-4 font-semibold">4" × 4"</td>
-                                    <td class="py-3 px-4 text-red-500 font-bold">$0.61</td>
-                                    <td class="py-3 px-4 text-sm">Small logos, pockets</td>
-                                </tr>
-                                <tr class="border-b border-gray-700 hover:bg-gray-800">
-                                    <td class="py-3 px-4 font-semibold">6" × 6"</td>
-                                    <td class="py-3 px-4 text-red-500 font-bold">$1.37</td>
-                                    <td class="py-3 px-4 text-sm">Medium logos</td>
-                                </tr>
-                                <tr class="border-b border-gray-700 hover:bg-gray-800">
-                                    <td class="py-3 px-4 font-semibold">8" × 10"</td>
-                                    <td class="py-3 px-4 text-red-500 font-bold">$3.04</td>
-                                    <td class="py-3 px-4 text-sm">Standard front prints</td>
-                                </tr>
-                                <tr class="border-b border-gray-700 hover:bg-gray-800">
-                                    <td class="py-3 px-4 font-semibold">10" × 10"</td>
-                                    <td class="py-3 px-4 text-red-500 font-bold">$3.80</td>
-                                    <td class="py-3 px-4 text-sm">Large designs</td>
-                                </tr>
-                                <tr class="border-b border-gray-700 hover:bg-gray-800 bg-red-900 bg-opacity-20">
-                                    <td class="py-3 px-4 font-semibold">12" × 12" <span class="text-red-500 text-xs">(1 sq ft)</span></td>
-                                    <td class="py-3 px-4 text-red-500 font-bold">$5.47</td>
-                                    <td class="py-3 px-4 text-sm">Full coverage</td>
-                                </tr>
-                                <tr class="hover:bg-gray-800">
-                                    <td class="py-3 px-4 font-semibold">11" × 14" <span class="text-blue-500 text-xs">(Max)</span></td>
-                                    <td class="py-3 px-4 text-red-500 font-bold">$5.85</td>
-                                    <td class="py-3 px-4 text-sm">Maximum size</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-
-                    <div class="mt-6 text-center">
-                        <p class="text-gray-400 text-sm mb-4">
-                            <strong>Custom Sizes:</strong> Length × Width × $0.038
-                        </p>
-                        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                            <a href="/contact" class="bg-red-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-red-700 transition-colors" onclick="trackDTFQuote()">Get Quote</a>
-                            <a href="tel:6476856286" class="bg-transparent border border-red-600 text-red-500 px-6 py-3 rounded-lg font-bold hover:bg-red-600 hover:text-white transition-colors" onclick="trackPhoneClick()">Call Now</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Competitive Note -->
-                <div class="mt-8 bg-black rounded-xl p-6 border border-red-600">
-                    <div class="text-center">
-                        <h4 class="text-xl font-bold text-white mb-2">🏆 Great Value</h4>
-                        <p class="text-gray-300">
-                            <strong class="text-red-500">$5.47/sq ft</strong> vs competitors at $6-10+
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        // Load all components
+        loadComponent('contact-banner', '/components/shared/contact-banner.html');
+        loadComponent('header-nav', '/components/shared/header-nav.html');
+        loadComponent('dtf-hero', '/components/dtf/dtf-hero.html');
+        loadComponent('dtf-pricing', '/components/dtf/dtf-pricing.html');
+        loadComponent('dtf-cta', '/components/dtf/dtf-cta.html');
+        loadComponent('floating-cta', '/components/shared/floating-cta.html');
+        loadComponent('footer', '/components/shared/footer.html');
+    </script>
+</body>
+</html>
