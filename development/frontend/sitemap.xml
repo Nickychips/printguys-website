@@ -74,6 +74,14 @@
         <priority>0.7</priority>
     </url>
     
+    <!-- FAQ Page -->
+    <url>
+        <loc>https://printguys.ca/faq</loc>
+        <lastmod>2025-07-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
     <!-- About Page -->
     <url>
         <loc>https://printguys.ca/about</loc>
