@@ -1,1 +1,38 @@
+        // Optimized services component loading with improved performance
+        (function() {
+            const servicesSection = document.getElementById('services-section');
+            const loadingElement = document.getElementById('services-loading');
+            
+            if (servicesSection) {
+                if (loadingElement) {
+                    loadingElement.style.display = 'block';
+                }
+                
                 fetch('/development/frontend/components/content/services-grid-with-images.html')
+                    .then(response => {
+                        if (!response.ok) throw new Error('Component not found');
+                        return response.text();
+                    })
+                    .then(data => {
+                        if (loadingElement) {
+                            loadingElement.style.display = 'none';
+                        }
+                        servicesSection.innerHTML = data;
+                        
+                        // Track services section loaded
+                        if (typeof gtag !== 'undefined') {
+                            gtag('event', 'services_loaded', {
+                                event_category: 'engagement',
+                                event_label: 'services_section',
+                                value: 1
+                            });
+                        }
+                    })
+                    .catch(error => {
+                        console.log('Services component loading fallback');
+                        if (loadingElement) {
+                            loadingElement.innerHTML = '<div class="py-16 bg-gray-900 text-center"><p class="text-gray-400">Services temporarily unavailable. Please contact us directly.</p></div>';
+                        }
+                    });
+            }
+        })();
