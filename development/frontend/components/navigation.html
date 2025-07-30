@@ -1,0 +1,168 @@
+<!-- Reusable Navigation Component - Use via JavaScript include -->
+
+<!-- Contact Banner -->
+<div class="contact-banner py-2 px-4" style="background-color:#dc2626;">
+    <div class="container mx-auto text-center">
+        <div class="text-white font-semibold">
+            <span class="mr-4">Contact Nick:</span>
+            <a href="tel:6476856286" class="hover:underline font-bold mr-4" onclick="trackPhoneClick()">647-685-6286</a>
+            <span class="hidden sm:inline">|</span>
+            <a href="mailto:printguys.ca@gmail.com" class="hover:underline font-bold sm:ml-4" onclick="trackEmailClick()">printguys.ca@gmail.com</a>
+        </div>
+    </div>
+</div>
+
+<!-- Header Navigation -->
+<header class="bg-black border-b border-red-600">
+    <div class="container mx-auto px-4">
+        <nav class="flex items-center justify-between py-4">
+            <a href="/"><img src="/assets/images/logo/printguys logotb.png" alt="PrintGuys Logo" class="h-8 md:h-10"></a>
+            
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="/" class="nav-link text-white hover:text-red-500 transition-colors">Home</a>
+                
+                <!-- Services Dropdown -->
+                <div class="services-dropdown" style="position:relative;">
+                    <button class="nav-link text-white hover:text-red-500 transition-colors flex items-center">
+                        Services
+                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="dropdown-menu">
+                        <a href="/dtf" class="service-item" onclick="trackServiceClick('dtf')">
+                            <div class="service-icon bg-red-600">🔥</div>
+                            <div class="service-info">
+                                <h4>DTF Heat Transfers</h4>
+                                <p>Premium transfers for any fabric</p>
+                            </div>
+                            <span class="price-badge">$0.038/sq"</span>
+                        </a>
+                        <a href="/screen-printing" class="service-item" onclick="trackServiceClick('screen_printing')">
+                            <div class="service-icon bg-blue-600">⚡</div>
+                            <div class="service-info">
+                                <h4>Screen Printing</h4>
+                                <p>Bulk orders, vibrant colors</p>
+                            </div>
+                        </a>
+                        <a href="/embroidery" class="service-item" onclick="trackServiceClick('embroidery')">
+                            <div class="service-icon bg-purple-600">🧵</div>
+                            <div class="service-info">
+                                <h4>Custom Embroidery</h4>
+                                <p>Professional logo stitching</p>
+                            </div>
+                        </a>
+                        <a href="/sublimation" class="service-item" onclick="trackServiceClick('sublimation')">
+                            <div class="service-icon bg-pink-600">🎨</div>
+                            <div class="service-info">
+                                <h4>Sublimation Printing</h4>
+                                <p>Photo-quality on mugs & more</p>
+                            </div>
+                        </a>
+                        <a href="/safety-wear" class="service-item" onclick="trackServiceClick('safety_wear')">
+                            <div class="service-icon bg-yellow-600">🦺</div>
+                            <div class="service-info">
+                                <h4>Safety Wear</h4>
+                                <p>CSA/ANSI compliant apparel</p>
+                            </div>
+                        </a>
+                        <a href="/uv-dtf-stickers" class="service-item" onclick="trackServiceClick('uv_dtf_stickers')">
+                            <div class="service-icon bg-green-600">🏷️</div>
+                            <div class="service-info">
+                                <h4>UV DTF Stickers</h4>
+                                <p>Waterproof, fade-resistant</p>
+                            </div>
+                        </a>
+                        <a href="/large-format-printing" class="service-item" onclick="trackServiceClick('large_format')">
+                            <div class="service-icon bg-indigo-600">📏</div>
+                            <div class="service-info">
+                                <h4>Large Format</h4>
+                                <p>Banners, signs & displays</p>
+                            </div>
+                        </a>
+                        <div style="border-top: 1px solid #374151; margin: 8px 0;"></div>
+                        <a href="/services" class="service-item" style="justify-content: center; font-weight: 600; color: #ef4444;">
+                            View All Services →
+                        </a>
+                    </div>
+                </div>
+                
+                <a href="/about" class="nav-link text-white hover:text-red-500 transition-colors">About</a>
+                <a href="/blog" class="nav-link text-white hover:text-red-500 transition-colors">Blog</a>
+                <a href="/contact" class="nav-link text-white hover:text-red-500 transition-colors">Contact</a>
+            </div>
+
+            <div class="hidden md:block">
+                <a href="/contact" class="bg-red-600 text-white px-6 py-2 rounded-lg font-bold hover:bg-red-700 transition-colors" onclick="trackQuoteClick()">Get Quote</a>
+            </div>
+
+            <button class="md:hidden text-white" id="mobile-menu-btn">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden" id="mobile-menu">
+            <div class="py-4 space-y-4 border-t border-red-600">
+                <a href="/" class="block nav-link text-white hover:text-red-500">Home</a>
+                <a href="/services" class="block nav-link text-white hover:text-red-500">Services</a>
+                <a href="/about" class="block nav-link text-white hover:text-red-500">About</a>
+                <a href="/blog" class="block nav-link text-white hover:text-red-500">Blog</a>
+                <a href="/contact" class="block nav-link text-white hover:text-red-500">Contact</a>
+                <a href="/contact" class="block bg-red-600 text-white px-4 py-2 rounded-lg font-bold text-center" onclick="trackQuoteClick()">Get Quote</a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<style>
+.services-dropdown{position:relative;}
+.dropdown-menu{position:absolute;top:100%;left:0;background:#111827;border:1px solid #374151;border-radius:0.75rem;box-shadow:0 20px 25px -5px rgba(0,0,0,0.5);z-index:1000;min-width:280px;opacity:0;visibility:hidden;transform:translateY(-10px);transition:all 0.3s ease;}
+.services-dropdown:hover .dropdown-menu{opacity:1;visibility:visible;transform:translateY(0);}
+.service-item{display:flex;align-items:center;padding:12px 16px;border-bottom:1px solid #374151;transition:background-color 0.2s ease;text-decoration:none;}
+.service-item:hover{background-color:#1f2937;}
+.service-item:last-child{border-bottom:none;}
+.service-icon{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;margin-right:12px;font-size:16px;}
+.service-info h4{font-weight:600;color:white;margin:0 0 2px 0;font-size:14px;}
+.service-info p{margin:0;color:#9CA3AF;font-size:12px;}
+.price-badge{background:#ef4444;color:white;font-size:10px;font-weight:bold;padding:2px 6px;border-radius:4px;margin-left:auto;}
+</style>
+
+<script>
+// Set active navigation state
+document.addEventListener('DOMContentLoaded', function() {
+    const path = window.location.pathname;
+    const links = document.querySelectorAll('.nav-link');
+    
+    links.forEach(link => {
+        if (link.getAttribute('href') === path || 
+            (path === '/' && link.getAttribute('href') === '/') ||
+            (path.startsWith('/services') && link.textContent.includes('Services')) ||
+            (path.startsWith('/blog') && link.getAttribute('href') === '/blog') ||
+            (path.startsWith('/about') && link.getAttribute('href') === '/about') ||
+            (path.startsWith('/contact') && link.getAttribute('href') === '/contact')) {
+            link.classList.add('text-red-500', 'font-semibold');
+            link.classList.remove('text-white');
+        }
+    });
+    
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    if (menuBtn && menu) {
+        menuBtn.addEventListener('click', function() {
+            menu.classList.toggle('hidden');
+        });
+    }
+});
+
+// Analytics functions (if needed)
+if (typeof trackPhoneClick === 'undefined') {
+    function trackPhoneClick() { console.log('Phone clicked'); }
+    function trackEmailClick() { console.log('Email clicked'); }
+    function trackQuoteClick() { console.log('Quote clicked'); }
+    function trackServiceClick(service) { console.log('Service clicked:', service); }
+}
+</script>
