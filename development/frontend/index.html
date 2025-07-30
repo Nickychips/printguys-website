@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PrintGuys - DTF Heat Transfers Canada | No Minimum Orders | $0.038/sq inch</title>
     <meta name="description" content="Canada's premier DTF printing service. Professional heat transfers from $0.038/sq inch with no minimums. 2-5 day turnaround. DTF, screen printing, embroidery & more. Call 647-685-6286.">
+    <meta name="keywords" content="DTF printing Canada, heat transfers, custom printing Toronto, screen printing, embroidery, no minimum orders, Canadian printing">
     <link rel="canonical" href="https://printguys.ca/">
     <link rel="icon" type="image/png" href="/assets/images/logo/printguys logotb.png">
     
-    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-4YH4M54622"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -39,7 +39,6 @@
         .service-info h4{font-weight:600;color:white;margin:0 0 2px 0;font-size:14px;}
         .service-info p{margin:0;color:#9CA3AF;font-size:12px;}
         .price-badge{background:#ef4444;color:white;font-size:10px;font-weight:bold;padding:2px 6px;border-radius:4px;margin-left:auto;}
-        @media (max-width:768px){.floating-cta{bottom:10px;right:10px;}.dropdown-menu{position:fixed;top:auto;left:0;right:0;min-width:100%;border-radius:0;}}
     </style>
 </head>
 <body class="bg-black text-white">
@@ -75,11 +74,7 @@
                         </button>
                         <div class="dropdown-menu">
                             <a href="/dtf" class="service-item" onclick="trackServiceClick('dtf')">
-                                <div class="service-icon bg-red-600">
-                                    <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                                    </svg>
-                                </div>
+                                <div class="service-icon bg-red-600">🔥</div>
                                 <div class="service-info">
                                     <h4>DTF Heat Transfers</h4>
                                     <p>Premium transfers for any fabric</p>
@@ -136,6 +131,7 @@
                     </div>
                     
                     <a href="/about" class="text-white hover:text-red-500 transition-colors">About</a>
+                    <a href="/faq" class="text-white hover:text-red-500 transition-colors">FAQ</a>
                     <a href="/blog" class="text-white hover:text-red-500 transition-colors">Blog</a>
                     <a href="/contact" class="text-white hover:text-red-500 transition-colors">Contact</a>
                 </div>
@@ -144,34 +140,16 @@
                     <a href="/contact" class="bg-red-600 text-white px-6 py-2 rounded-lg font-bold hover:bg-red-700 transition-colors" onclick="trackQuoteClick()">Get Quote</a>
                 </div>
 
-                <button class="md:hidden text-white" id="mobile-menu-btn">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
-                </button>
+                <button class="md:hidden text-white" id="mobile-menu-btn">☰</button>
             </nav>
 
             <!-- Mobile Menu -->
             <div class="md:hidden hidden" id="mobile-menu">
                 <div class="py-4 space-y-4 border-t border-red-600">
                     <a href="/" class="block text-red-500 font-semibold">Home</a>
-                    
-                    <!-- Mobile Services -->
-                    <div class="border-l-2 border-red-600 pl-4">
-                        <div class="text-white font-semibold mb-2">Services:</div>
-                        <div class="space-y-2 text-sm">
-                            <a href="/dtf" class="block text-gray-300" onclick="trackServiceClick('dtf')">DTF Heat Transfers</a>
-                            <a href="/screen-printing" class="block text-gray-300" onclick="trackServiceClick('screen_printing')">Screen Printing</a>
-                            <a href="/embroidery" class="block text-gray-300" onclick="trackServiceClick('embroidery')">Custom Embroidery</a>
-                            <a href="/sublimation" class="block text-gray-300" onclick="trackServiceClick('sublimation')">Sublimation</a>
-                            <a href="/safety-wear" class="block text-gray-300" onclick="trackServiceClick('safety_wear')">Safety Wear</a>
-                            <a href="/uv-dtf-stickers" class="block text-gray-300" onclick="trackServiceClick('uv_dtf_stickers')">UV DTF Stickers</a>
-                            <a href="/large-format-printing" class="block text-gray-300" onclick="trackServiceClick('large_format')">Large Format</a>
-                            <a href="/services" class="block text-red-500 font-semibold">→ View All Services</a>
-                        </div>
-                    </div>
-                    
+                    <a href="/services" class="block text-white hover:text-red-500">Services</a>
                     <a href="/about" class="block text-white hover:text-red-500">About</a>
+                    <a href="/faq" class="block text-white hover:text-red-500">FAQ</a>
                     <a href="/blog" class="block text-white hover:text-red-500">Blog</a>
                     <a href="/contact" class="block text-white hover:text-red-500">Contact</a>
                     <a href="/contact" class="block bg-red-600 text-white px-4 py-2 rounded-lg font-bold text-center" onclick="trackQuoteClick()">Get Quote</a>
@@ -208,43 +186,47 @@
                 </div>
 
                 <!-- CTA Buttons -->
-                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
                     <a href="/contact" class="bg-red-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-red-700 transition-colors" onclick="trackQuoteClick()">Get Quote</a>
                     <a href="mailto:printguys.ca@gmail.com?subject=Design Upload" class="bg-transparent border-2 border-red-600 text-red-500 px-8 py-4 rounded-lg font-bold text-lg hover:bg-red-600 hover:text-white transition-colors" onclick="trackEmailClick()">Send Design</a>
+                </div>
+
+                <!-- FAQ Link -->
+                <div class="text-center">
+                    <p class="text-gray-400 mb-4">Have questions about DTF printing, pricing, or turnaround times?</p>
+                    <a href="/faq" class="text-red-500 hover:text-red-400 font-semibold">Check our FAQ →</a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Services Preview -->
-    <div id="services-section">
-        <div class="py-16 bg-gray-900">
-            <div class="container mx-auto px-4">
-                <div class="text-center mb-12">
-                    <h2 class="text-4xl font-bold text-white mb-4">Our Services</h2>
-                    <p class="text-xl text-gray-400">Professional printing solutions</p>
+    <div class="py-16 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-white mb-4">Our Services</h2>
+                <p class="text-xl text-gray-400">Professional printing solutions</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                <div class="bg-gray-800 rounded-lg p-6 text-center">
+                    <div class="text-4xl mb-4">🔥</div>
+                    <h3 class="text-xl font-bold text-white mb-2">DTF Transfers</h3>
+                    <p class="text-gray-400 text-sm">Premium quality for any fabric</p>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-                    <div class="bg-gray-800 rounded-lg p-6 text-center">
-                        <div class="text-4xl mb-4">🔥</div>
-                        <h3 class="text-xl font-bold text-white mb-2">DTF Transfers</h3>
-                        <p class="text-gray-400 text-sm">Premium quality for any fabric</p>
-                    </div>
-                    <div class="bg-gray-800 rounded-lg p-6 text-center">
-                        <div class="text-4xl mb-4">⚡</div>
-                        <h3 class="text-xl font-bold text-white mb-2">Screen Printing</h3>
-                        <p class="text-gray-400 text-sm">Bulk orders, vibrant colors</p>
-                    </div>
-                    <div class="bg-gray-800 rounded-lg p-6 text-center">
-                        <div class="text-4xl mb-4">🧵</div>
-                        <h3 class="text-xl font-bold text-white mb-2">Embroidery</h3>
-                        <p class="text-gray-400 text-sm">Professional logo stitching</p>
-                    </div>
-                    <div class="bg-gray-800 rounded-lg p-6 text-center">
-                        <div class="text-4xl mb-4">🦺</div>
-                        <h3 class="text-xl font-bold text-white mb-2">Safety Wear</h3>
-                        <p class="text-gray-400 text-sm">CSA/ANSI compliant</p>
-                    </div>
+                <div class="bg-gray-800 rounded-lg p-6 text-center">
+                    <div class="text-4xl mb-4">⚡</div>
+                    <h3 class="text-xl font-bold text-white mb-2">Screen Printing</h3>
+                    <p class="text-gray-400 text-sm">Bulk orders, vibrant colors</p>
+                </div>
+                <div class="bg-gray-800 rounded-lg p-6 text-center">
+                    <div class="text-4xl mb-4">🧵</div>
+                    <h3 class="text-xl font-bold text-white mb-2">Embroidery</h3>
+                    <p class="text-gray-400 text-sm">Professional logo stitching</p>
+                </div>
+                <div class="bg-gray-800 rounded-lg p-6 text-center">
+                    <div class="text-4xl mb-4">🦺</div>
+                    <h3 class="text-xl font-bold text-white mb-2">Safety Wear</h3>
+                    <p class="text-gray-400 text-sm">CSA/ANSI compliant</p>
                 </div>
             </div>
         </div>
@@ -269,6 +251,9 @@
                         <div><a href="tel:6476856286" class="text-white hover:text-red-500 font-bold" onclick="trackPhoneClick()">647-685-6286</a></div>
                         <div><a href="mailto:printguys.ca@gmail.com" class="text-white hover:text-red-500 font-bold" onclick="trackEmailClick()">printguys.ca@gmail.com</a></div>
                     </div>
+                    <div class="mt-4">
+                        <a href="/faq" class="text-red-500 hover:text-red-400 text-sm">Frequently Asked Questions</a>
+                    </div>
                 </div>
             </div>
             <div class="border-t border-gray-700 mt-8 pt-8 text-center">
@@ -277,7 +262,6 @@
         </div>
     </footer>
 
-    <!-- JavaScript -->
     <script>
         document.getElementById('mobile-menu-btn').addEventListener('click', function() {
             const menu = document.getElementById('mobile-menu');
