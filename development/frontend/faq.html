@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Frequently Asked Questions | PrintGuys Canada</title>
+    <meta name="description" content="Get answers to common questions about DTF printing, pricing, turnaround times, file requirements, and custom printing services at PrintGuys.">
+    <link rel="canonical" href="https://printguys.ca/faq">
+    <link rel="icon" type="image/png" href="/assets/images/logo/printguys logotb.png">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <style>
+        .hero-gradient{background:linear-gradient(135deg,#000 0%,#1a1a1a 50%,#000 100%);}
+        .text-gradient{background:linear-gradient(135deg,#ef4444,#dc2626);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+        .contact-banner{background-color:#dc2626;}
+        .services-dropdown{position:relative;}
+        .dropdown-menu{position:absolute;top:100%;left:0;background:#111827;border:1px solid #374151;border-radius:0.75rem;box-shadow:0 20px 25px -5px rgba(0,0,0,0.5);z-index:1000;min-width:280px;opacity:0;visibility:hidden;transform:translateY(-10px);transition:all 0.3s ease;}
+        .services-dropdown:hover .dropdown-menu{opacity:1;visibility:visible;transform:translateY(0);}
+        .service-item{display:flex;align-items:center;padding:12px 16px;border-bottom:1px solid #374151;transition:background-color 0.2s ease;}
+        .service-item:hover{background-color:#1f2937;}
+        .service-item:last-child{border-bottom:none;}
+        .service-icon{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;margin-right:12px;}
+        .service-info h4{font-weight:600;color:white;margin:0 0 2px 0;font-size:14px;}
+        .service-info p{margin:0;color:#9CA3AF;font-size:12px;}
+        .price-badge{background:#ef4444;color:white;font-size:10px;font-weight:bold;padding:2px 6px;border-radius:4px;margin-left:auto;}
+        .faq-item{border:1px solid #374151;border-radius:0.75rem;margin-bottom:1rem;overflow:hidden;}
+        .faq-question{cursor:pointer;padding:1.5rem;background:#1f2937;transition:background-color 0.2s ease;}
+        .faq-question:hover{background:#374151;}
+        .faq-answer{padding:1.5rem;background:#111827;display:none;}
+        .faq-answer.active{display:block;}
+        .faq-icon{transition:transform 0.2s ease;}
+        .faq-icon.active{transform:rotate(180deg);}
+    </style>
+</head>
+<body class="bg-black text-white">
+
+    <!-- Contact Banner -->
+    <div class="contact-banner py-2 px-4">
+        <div class="container mx-auto text-center">
+            <div class="text-white font-semibold">
+                <span class="mr-4">Contact Nick:</span>
+                <a href="tel:6476856286" class="hover:underline font-bold mr-4">647-685-6286</a>
+                <span class="hidden sm:inline">|</span>
+                <a href="mailto:printguys.ca@gmail.com" class="hover:underline font-bold sm:ml-4">printguys.ca@gmail.com</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header Navigation -->
+    <header class="bg-black border-b border-red-600">
+        <div class="container mx-auto px-4">
+            <nav class="flex items-center justify-between py-4">
+                <a href="/"><img src="/assets/images/logo/printguys logotb.png" alt="PrintGuys Logo" class="h-8 md:h-10"></a>
+                
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="/" class="text-white hover:text-red-500 transition-colors">Home</a>
+                    
+                    <!-- Services Dropdown -->
+                    <div class="services-dropdown">
+                        <button class="text-white hover:text-red-500 transition-colors flex items-center">
+                            Services
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="dropdown-menu">
+                            <a href="/dtf" class="service-item">
+                                <div class="service-icon bg-red-600">🔥</div>
+                                <div class="service-info">
+                                    <h4>DTF Heat Transfers</h4>
+                                    <p>Premium transfers for any fabric</p>
+                                </div>
+                                <span class="price-badge">$0.038/sq"</span>
+                            </a>
+                            <a href="/screen-printing" class="service-item">
+                                <div class="service-icon bg-blue-600">⚡</div>
+                                <div class="service-info">
+                                    <h4>Screen Printing</h4>
+                                    <p>Bulk orders, vibrant colors</p>
+                                </div>
+                            </a>
+                            <a href="/embroidery" class="service-item">
+                                <div class="service-icon bg-purple-600">🧵</div>
+                                <div class="service-info">
+                                    <h4>Custom Embroidery</h4>
+                                    <p>Professional logo stitching</p>
+                                </div>
+                            </a>
+                            <a href="/sublimation" class="service-item">
+                                <div class="service-icon bg-pink-600">🎨</div>
+                                <div class="service-info">
+                                    <h4>Sublimation Printing</h4>
+                                    <p>Photo-quality on mugs & more</p>
+                                </div>
+                            </a>
+                            <a href="/safety-wear" class="service-item">
+                                <div class="service-icon bg-yellow-600">🦺</div>
+                                <div class="service-info">
+                                    <h4>Safety Wear</h4>
+                                    <p>CSA/ANSI compliant apparel</p>
+                                </div>
+                            </a>
+                            <a href="/uv-dtf-stickers" class="service-item">
+                                <div class="service-icon bg-green-600">🏷️</div>
+                                <div class="service-info">
+                                    <h4>UV DTF Stickers</h4>
+                                    <p>Waterproof, fade-resistant</p>
+                                </div>
+                            </a>
+                            <a href="/large-format-printing" class="service-item">
+                                <div class="service-icon bg-indigo-600">📏</div>
+                                <div class="service-info">
+                                    <h4>Large Format</h4>
+                                    <p>Banners, signs & displays</p>
+                                </div>
+                            </a>
+                            <div style="border-top: 1px solid #374151; margin: 8px 0;"></div>
+                            <a href="/services" class="service-item" style="justify-content: center; font-weight: 600; color: #ef4444;">
+                                View All Services →
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <a href="/about" class="text-white hover:text-red-500 transition-colors">About</a>
+                    <a href="/blog" class="text-white hover:text-red-500 transition-colors">Blog</a>
+                    <a href="/contact" class="text-white hover:text-red-500 transition-colors">Contact</a>
+                </div>
+
+                <div class="hidden md:block">
+                    <a href="/contact" class="bg-red-600 text-white px-6 py-2 rounded-lg font-bold hover:bg-red-700 transition-colors">Get Quote</a>
+                </div>
+
+                <button class="md:hidden text-white" id="mobile-menu-btn">☰</button>
+            </nav>
+
+            <!-- Mobile Menu -->
+            <div class="md:hidden hidden" id="mobile-menu">
+                <div class="py-4 space-y-4 border-t border-red-600">
+                    <a href="/" class="block text-white">Home</a>
+                    <a href="/services" class="block text-white">Services</a>
+                    <a href="/about" class="block text-white">About</a>
+                    <a href="/blog" class="block text-white">Blog</a>
+                    <a href="/contact" class="block text-white">Contact</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient py-20">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-4xl mx-auto">
+                <h1 class="text-4xl lg:text-6xl font-bold mb-6">Frequently Asked <span class="text-gradient">Questions</span></h1>
+                <p class="text-xl lg:text-2xl text-gray-300 mb-8">Get answers to common questions about our custom printing services</p>
+                <p class="text-lg text-gray-400">Can't find what you're looking for? <a href="/contact" class="text-red-500 hover:underline">Contact us directly</a> for personalized help.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Content -->
+    <section class="py-16 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                
+                <!-- DTF Printing FAQ -->
+                <div class="mb-12">
+                    <h2 class="text-3xl font-bold text-white mb-8 text-center">DTF Heat Transfers</h2>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question flex items-center justify-between" onclick="toggleFAQ(this)">
+                            <h3 class="text-xl font-bold text-white">What is DTF printing?</h3>
+                            <svg class="w-6 h-6 text-red-500 faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </div>
+                        <div class="faq-answer">
+                            <p class="text-gray-300">DTF (Direct-to-Film) printing is a revolutionary printing method where designs are printed onto a special film, then transferred to fabric using heat and pressure. It works on any fabric type - cotton, polyester, blends, and more - with vibrant colors and excellent durability.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question flex items-center justify-between" onclick="toggleFAQ(this)">
+                            <h3 class="text-xl font-bold text-white">How much do DTF transfers cost?</h3>
+                            <svg class="w-6 h-6 text-red-500 faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </div>
+                        <div class="faq-answer">
+                            <p class="text-gray-300 mb-4">Our DTF transfers start at <strong class="text-red-500">$0.038 per square inch</strong>. Pricing depends on:</p>
+                            <ul class="list-disc pl-6 text-gray-300 space-y-2">
+                                <li>Design size (measured in square inches)</li>
+                                <li>Quantity ordered (bulk discounts available)</li>
+                                <li>Design complexity (number of colors)</li>
+                                <li>Special effects (white ink, specialty finishes)</li>
+                            </ul>
+                            <p class="text-gray-300 mt-4">Example: A 4" x 4" design (16 sq inches) would cost approximately $0.61 each.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question flex items-center justify-between" onclick="toggleFAQ(this)">
+                            <h3 class="text-xl font-bold text-white">What fabrics work with DTF transfers?</h3>
+                            <svg class="w-6 h-6 text-red-500 faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </div>
+                        <div class="faq-answer">
+                            <p class="text-gray-300 mb-4">DTF transfers work on virtually any fabric:</p>
+                            <ul class="list-disc pl-6 text-gray-300 space-y-2">
+                                <li>100% Cotton</li>
+                                <li>100% Polyester</li>
+                                <li>Cotton/Poly blends</li>
+                                <li>Denim</li>
+                                <li>Canvas</li>
+                                <li>Leather (with proper heat settings)</li>
+                                <li>Nylon and synthetic fabrics</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question flex items-center justify-between" onclick="toggleFAQ(this)">
+                            <h3 class="text-xl font-bold text-white">How long do DTF transfers last?</h3>
+                            <svg class="w-6 h-6 text-red-500 faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </div>
+                        <div class="faq-answer">
+                            <p class="text-gray-300">When properly applied and cared for, DTF transfers can last 50+ wash cycles while maintaining vibrant colors and sharp details. For maximum durability, wash in cold water, inside out, and air dry when possible.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ordering & Production FAQ -->
+                <div class="mb-12">
+                    <h2 class="text-3xl font-bold text-white mb-8 text-center">Ordering & Production</h2>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question flex items-center justify-between" onclick="toggleFAQ(this)">
+                            <h3 class="text-xl font-bold text-white">What are your minimum order requirements?</h3>
+                            <svg class="w-6 h-6 text-red-500 faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </div>
+                        <div class="faq-answer">
+                            <p class="text-gray-300 mb-4"><strong class="text-red-500">No minimums for DTF transfers!</strong> You can order as few as 1 piece. Other services have different minimums:</p>
+                            <ul class="list-disc pl-6 text-gray-300 space-y-2">
+                                <li><strong>DTF Transfers:</strong> No minimum</li>
+                                <li><strong>Screen Printing:</strong> 12 pieces minimum</li>
+                                <li><strong>Embroidery:</strong> 6 pieces minimum</li>
+                                <li><strong>Sublimation:</strong> No minimum</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question flex items-center justify-between" onclick="toggleFAQ(this)">
+                            <h3 class="text-xl font-bold text-white">How long is your turnaround time?</h3>
+                            <svg class="w-6 h-6 text-red-500 faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </div>
+                        <div class="faq-answer">
+                            <p class="text-gray-300 mb-4">Standard turnaround times:</p>
+                            <ul class="list-disc pl-6 text-gray-300 space-y-2">
+                                <li><strong>DTF Transfers:</strong> 2-5 business days</li>
+                                <li><strong>Screen Printing:</strong> 3-7 business days</li>
+                                <li><strong>Embroidery:</strong> 5-10 business days</li>
+                                <li><strong>Large Format:</strong> 2-5 business days</li>
+                            </ul>
+                            <p class="text-gray-300 mt-4">Rush orders available for additional fee. Contact us for expedited service options.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question flex items-center justify-between" onclick="toggleFAQ(this)">
+                            <h3 class="text-xl font-bold text-white">What file formats do you accept?</h3>
+                            <svg class="w-6 h-6 text-red-500 faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </div>
+                        <div class="faq-answer">
+                            <p class="text-gray-300 mb-4">We accept high-resolution files in these formats:</p>
+                            <ul class="list-disc pl-6 text-gray-300 space-y-2">
+                                <li><strong>Vector files:</strong> AI, EPS, PDF, SVG (preferred for best quality)</li>
+                                <li><strong>Raster files:</strong> PNG, JPEG, TIFF, PSD</li>
+                                <li><strong>Minimum resolution:</strong> 300 DPI at actual print size</li>
+                                <li><strong>For embroidery:</strong> DST, EMB files preferred</li>
+                            </ul>
+                            <p class="text-gray-300 mt-4">Don't have the right file format? We offer design services and file conversion.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Shipping & Payment FAQ -->
+                <div class="mb-12">
+                    <h2 class="text-3xl font-bold text-white mb-8 text-center">Shipping & Payment</h2>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question flex items-center justify-between" onclick="toggleFAQ(this)">
+                            <h3 class="text-xl font-bold text-white">Do you ship across Canada?</h3>
+                            <svg class="w-6 h-6 text-red-500 faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </div>
+                        <div class="faq-answer">
+                            <p class="text-gray-300 mb-4">Yes! We ship to all provinces and territories across Canada via:</p>
+                            <ul class="list-disc pl-6 text-gray-300 space-y-2">
+                                <li><strong>Canada Post:</strong> Standard and express options</li>
+                                <li><strong>UPS:</strong> Ground and expedited service</li>
+                                <li><strong>Local delivery:</strong> Available in GTA area</li>
+                                <li><strong>Pickup:</strong> Available by appointment</li>
+                            </ul>
+                            <p class="text-gray-300 mt-4">Shipping costs calculated at checkout based on size, weight, and destination.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question flex items-center justify-between" onclick="toggleFAQ(this)">
+                            <h3 class="text-xl font-bold text-white">What payment methods do you accept?</h3>
+                            <svg class="w-6 h-6 text-red-500 faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </div>
+                        <div class="faq-answer">
+                            <p class="text-gray-300 mb-4">We accept multiple payment options:</p>
+                            <ul class="list-disc pl-6 text-gray-300 space-y-2">
+                                <li>Credit cards (Visa, MasterCard, American Express)</li>
+                                <li>Debit cards</li>
+                                <li>E-transfer (Canadian customers)</li>
+                                <li>PayPal</li>
+                                <li>Net 30 terms (approved business accounts)</li>
+                            </ul>
+                            <p class="text-gray-300 mt-4">Payment is typically required before production begins, except for approved business accounts.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quality & Support FAQ -->
+                <div class="mb-12">
+                    <h2 class="text-3xl font-bold text-white mb-8 text-center">Quality & Support</h2>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question flex items-center justify-between" onclick="toggleFAQ(this)">
+                            <h3 class="text-xl font-bold text-white">Do you offer samples or proofs?</h3>
+                            <svg class="w-6 h-6 text-red-500 faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </div>
+                        <div class="faq-answer">
+                            <p class="text-gray-300">Yes! We provide digital proofs for all orders at no extra cost. Physical samples available for large orders or upon request (small fee may apply). We want you to be 100% satisfied before we begin production.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question flex items-center justify-between" onclick="toggleFAQ(this)">
+                            <h3 class="text-xl font-bold text-white">What if I'm not satisfied with my order?</h3>
+                            <svg class="w-6 h-6 text-red-500 faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </div>
+                        <div class="faq-answer">
+                            <p class="text-gray-300">Your satisfaction is our priority. If there's an issue with your order due to our error, we'll reprint at no cost. For quality concerns, contact us within 7 days of delivery. We stand behind our work with a satisfaction guarantee.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question flex items-center justify-between" onclick="toggleFAQ(this)">
+                            <h3 class="text-xl font-bold text-white">Can you help with design work?</h3>
+                            <svg class="w-6 h-6 text-red-500 faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </div>
+                        <div class="faq-answer">
+                            <p class="text-gray-300 mb-4">Absolutely! Our design services include:</p>
+                            <ul class="list-disc pl-6 text-gray-300 space-y-2">
+                                <li>Logo creation and redesign</li>
+                                <li>File format conversion</li>
+                                <li>Image cleanup and enhancement</li>
+                                <li>Text-based designs</li>
+                                <li>Color matching and adjustments</li>
+                            </ul>
+                            <p class="text-gray-300 mt-4">Design fees vary based on complexity. Contact us for a quote!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Still Have Questions -->
+                <div class="text-center bg-gray-800 rounded-xl p-8">
+                    <h2 class="text-3xl font-bold text-white mb-6">Still Have Questions?</h2>
+                    <p class="text-gray-300 mb-8">Can't find the answer you're looking for? Our team is here to help!</p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a href="tel:6476856286" class="bg-red-600 text-white px-8 py-4 rounded-lg font-bold hover:bg-red-700 transition-colors">Call: 647-685-6286</a>
+                        <a href="mailto:printguys.ca@gmail.com?subject=FAQ Question" class="bg-blue-600 text-white px-8 py-4 rounded-lg font-bold hover:bg-blue-700 transition-colors">Email Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 border-t border-red-600 py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-center md:text-left">
+                <div>
+                    <img src="/assets/images/logo/printguys logotb.png" alt="PrintGuys Logo" class="h-12 mx-auto md:mx-0 mb-4">
+                    <p class="text-gray-400">Canada's premier printing services</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-4">Contact PrintGuys</h4>
+                    <div class="space-y-2 text-gray-400">
+                        <div><a href="tel:6476856286" class="text-white hover:text-red-500 font-bold">647-685-6286</a></div>
+                        <div><a href="mailto:printguys.ca@gmail.com" class="text-white hover:text-red-500 font-bold">printguys.ca@gmail.com</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p class="text-gray-400">&copy; 2025 PrintGuys. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        function toggleFAQ(element) {
+            const answer = element.nextElementSibling;
+            const icon = element.querySelector('.faq-icon');
+            
+            // Close all other FAQs
+            document.querySelectorAll('.faq-answer').forEach(faq => {
+                if (faq !== answer) {
+                    faq.classList.remove('active');
+                }
+            });
+            document.querySelectorAll('.faq-icon').forEach(i => {
+                if (i !== icon) {
+                    i.classList.remove('active');
+                }
+            });
+            
+            // Toggle current FAQ
+            answer.classList.toggle('active');
+            icon.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
