@@ -5,7 +5,7 @@
     <!-- Homepage -->
     <url>
         <loc>https://printguys.ca/</loc>
-        <lastmod>2025-07-29</lastmod>
+        <lastmod>2025-07-30</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -13,7 +13,7 @@
     <!-- DTF Heat Transfers - Primary Service -->
     <url>
         <loc>https://printguys.ca/dtf</loc>
-        <lastmod>2025-07-29</lastmod>
+        <lastmod>2025-07-30</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
@@ -21,7 +21,7 @@
     <!-- Screen Printing -->
     <url>
         <loc>https://printguys.ca/screen-printing</loc>
-        <lastmod>2025-07-29</lastmod>
+        <lastmod>2025-07-30</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -29,7 +29,7 @@
     <!-- Custom Embroidery -->
     <url>
         <loc>https://printguys.ca/embroidery</loc>
-        <lastmod>2025-07-29</lastmod>
+        <lastmod>2025-07-30</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -37,15 +37,23 @@
     <!-- Sublimation Printing -->
     <url>
         <loc>https://printguys.ca/sublimation</loc>
-        <lastmod>2025-07-29</lastmod>
+        <lastmod>2025-07-30</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
+    </url>
+    
+    <!-- Safety Wear -->
+    <url>
+        <loc>https://printguys.ca/safety-wear</loc>
+        <lastmod>2025-07-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
     </url>
     
     <!-- UV DTF Stickers -->
     <url>
         <loc>https://printguys.ca/uv-dtf-stickers</loc>
-        <lastmod>2025-07-29</lastmod>
+        <lastmod>2025-07-30</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
@@ -53,7 +61,7 @@
     <!-- Large Format Printing -->
     <url>
         <loc>https://printguys.ca/large-format-printing</loc>
-        <lastmod>2025-07-29</lastmod>
+        <lastmod>2025-07-30</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
@@ -61,7 +69,7 @@
     <!-- About Page -->
     <url>
         <loc>https://printguys.ca/about</loc>
-        <lastmod>2025-07-29</lastmod>
+        <lastmod>2025-07-30</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
@@ -69,7 +77,7 @@
     <!-- Contact Page -->
     <url>
         <loc>https://printguys.ca/contact</loc>
-        <lastmod>2025-07-29</lastmod>
+        <lastmod>2025-07-30</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -77,15 +85,23 @@
     <!-- Blog -->
     <url>
         <loc>https://printguys.ca/blog</loc>
-        <lastmod>2025-07-29</lastmod>
+        <lastmod>2025-07-30</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
+    </url>
+    
+    <!-- Blog Articles -->
+    <url>
+        <loc>https://printguys.ca/blog/dtf-care-instructions</loc>
+        <lastmod>2025-07-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
     </url>
     
     <!-- DTF Guide -->
     <url>
         <loc>https://printguys.ca/dtf-guide</loc>
-        <lastmod>2025-07-29</lastmod>
+        <lastmod>2025-07-30</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
